@@ -1,0 +1,51 @@
+.check {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  margin-bottom: 64px;
+
+  .title {
+    max-width: 300px;
+  }
+
+  &__banner {
+    display: block;
+    width: 263px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__content {
+    width: calc(100% - 263px);
+    padding: 48px 11.7% 48px 56px;
+    background: #e7e6ee;
+
+    .yellow-btn {
+      margin-top: 47px;
+      max-width: 232px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    & + & {
+      margin-top: 20px;
+    }
+
+    svg {
+      display: block;
+      margin-right: 16px;
+      width: 19px;
+      height: 27px;
+      flex-shrink: 0;
+    }
+
+    &-text {
+      display: block;
+      @include font-source-sans(18px, #000, 450, 27px);
+    }
+  }
+}

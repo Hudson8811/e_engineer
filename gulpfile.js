@@ -23,7 +23,8 @@ var path = {
 		css: 'build/assets/css/',
 		cssLibs: 'build/assets/css/libs/',
 		images: 'build/assets/images/',
-		svg: 'build/assets/images/svg/'
+		svg: 'build/assets/images/svg/',
+		fonts: 'build/assets/fonts/'
 	},
 	src: {
 		html: 'src/views/*.pug',
@@ -31,14 +32,16 @@ var path = {
 		style: 'src/style/main.scss',
 		styleLibs: 'src/style/libs/*.*',
 		images: 'src/images/**/*.*',
-		svg: 'src/svg/**/*.svg'
+		svg: 'src/svg/**/*.svg',
+		fonts: 'src/fonts/*.woff'
 	},
 	watch: {
 		html: 'src/**/*.pug',
 		js: 'src/js/**/*.js',
 		style: 'src/style/**/*.scss',
 		images: 'src/images/**/*.*',
-		svg: 'src/svg/**/*.svg'
+		svg: 'src/svg/**/*.svg',
+		fonts: 'src/fonts/*.woff'
 	},
 	clean: './build'
 };
@@ -51,7 +54,7 @@ var config = {
 	//tunnel: true,
 	host: 'localhost',
 	port: 9000,
-	logPrefix: "PipZip"
+	logPrefix: "Toolnado"
 };
 
 gulp.task('html:build', function buildHTML() {
@@ -99,6 +102,11 @@ gulp.task('style-libs:build', function () {
 		.pipe(reload({stream: true}));
 });
 
+gulp.task('fonts:build', function(){
+	return gulp.src(path.src.fonts)
+		.pipe(gulp.dest(path.build.fonts));
+})
+
 gulp.task('images:build', function () {
 	return gulp.src(path.src.images)
 		.pipe(imagemin({
@@ -125,7 +133,7 @@ gulp.task('svgSprite:build', function () {
 
 
 
-gulp.task('build', gulp.parallel('html:build', 'js:build', 'style:build', 'style-libs:build', 'images:build', 'svgSprite:build'));
+gulp.task('build', gulp.parallel('html:build', 'js:build', 'style:build', 'style-libs:build', 'images:build', 'svgSprite:build', 'fonts:build'));
 
 gulp.task('watch', function(){
 	gulp.watch([path.watch.html], gulp.series("html:build"));

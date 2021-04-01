@@ -11,11 +11,139 @@
     <title>Main page</title>
   </head>
   <body>
-    <div class="wrapper main__page">
-      <header class="header"></header>
+    <div class="wrapper main_page">
+      <header class="header">
+        <div class="header__wrapper"><a class="header__logo" href="#">
+            <svg>
+              <use xlink:href="./assets/images/svg/sprite.svg#logo"></use>
+            </svg></a></div>
+        <ul class="header__menu"> 
+          <li class="header__item"> <a class="header__link" href="#">Счетчики тепла</a></li>
+          <li class="header__item"> <a class="header__link is--active" href="#">Счетчики воды</a></li>
+          <li class="header__item"> <a class="header__link" href="#">Бойлеры</a></li>
+          <li class="header__item"> <a class="header__link" href="#">Наши услуги</a></li>
+        </ul>
+        <div class="header__wrapper header__info"><a class="header__phone" href="tel:+0675134857">(067) 513-48-57</a><a class="header__phone" href="tel:+0504873877">(050) 487-38-77</a>
+          <p class="header__desc"> <a class="header__desc-link" href="#">Контакты</a><span>|</span><a class="header__desc-link" href="#">Оплата и доставка</a></p>
+          <p class="header__disclaimer">© 2020 e-engineering</p>
+        </div>
+      </header>
       <main class="main">
+        <div class="container">
+          <div class="banner" style="background-image:url(assets/images/banner.jpg)">
+            <div class="banner__text"> 
+              <div class="banner__title">поверка счетчиков воды без снятия за <span class="nowrap">30 минут</span></div>
+              <div class="banner__desc">Стоимость: 350 грн</div>
+            </div>
+          </div>
+          <div class="confidence">
+            <div class="confidence__items">
+              <div class="confidence__item">
+                <div class="confidence__item-icon"> 
+                  <svg>
+                    <use xlink:href="./assets/images/svg/sprite.svg#confidence1"></use>
+                  </svg>
+                </div>
+                <p class="confidence__item-desc">Выполняем работы на договорной основе</p>
+              </div>
+              <div class="confidence__item">
+                <div class="confidence__item-icon"> 
+                  <svg>
+                    <use xlink:href="./assets/images/svg/sprite.svg#confidence2"></use>
+                  </svg>
+                </div>
+                <p class="confidence__item-desc">Работа занимает <span class="nowrap">не более</span> 20 мин.</p>
+              </div>
+              <div class="confidence__item">
+                <div class="confidence__item-icon"> 
+                  <svg>
+                    <use xlink:href="./assets/images/svg/sprite.svg#confidence3"></use>
+                  </svg>
+                </div>
+                <p class="confidence__item-desc">Передаем все данные в КП «Водоканал»</p>
+              </div>
+              <div class="confidence__item">
+                <div class="confidence__item-icon"> 
+                  <svg>
+                    <use xlink:href="./assets/images/svg/sprite.svg#confidence4"></use>
+                  </svg>
+                </div>
+                <p class="confidence__item-desc">Точность поверки составляет 99.9%</p>
+              </div>
+            </div>
+            <div class="confidence__text">
+              <p class="title">Почему стоит доверить это нам</p>
+              <p class="confidence__desc">Компания «Е-инжиниринг КО» является уполномоченной организацией по проведению поверок счетчиков воды. Наши менеджеры максимально быстро сориентируют Вас по всем этапам процедури, а наши специалисты выполнят поверку на високоточном сертифицированном оборудовании</p><a class="confidence__link" href="#">Свидетельство про уполномочия № П-12-2019 от 25.02.2019</a>
+            </div>
+          </div>
+          <div class="check"> 
+            <div class="check__content"> 
+              <p class="title">Как мы выполняем поверку счетчика?</p>
+              <div class="check__item"> 
+                <svg>
+                  <use xlink:href="./assets/images/svg/sprite.svg#check"></use>
+                </svg>
+                <p class="check__item-text">Подключаем проливную установку к трубопроводу</p>
+              </div>
+              <div class="check__item"> 
+                <svg>
+                  <use xlink:href="./assets/images/svg/sprite.svg#check"></use>
+                </svg>
+                <p class="check__item-text">Устанавливаем камеру на счетчик воды</p>
+              </div>
+              <div class="check__item"> 
+                <svg>
+                  <use xlink:href="./assets/images/svg/sprite.svg#check"></use>
+                </svg>
+                <p class="check__item-text">Проводим измерения счетчика воды</p>
+              </div>
+              <div class="check__item"> 
+                <svg>
+                  <use xlink:href="./assets/images/svg/sprite.svg#check"></use>
+                </svg>
+                <p class="check__item-text">Оформляем акт проверки вашего счетчика</p>
+              </div>
+              <div class="check__item"> 
+                <svg>
+                  <use xlink:href="./assets/images/svg/sprite.svg#check"></use>
+                </svg>
+                <p class="check__item-text">Передаем данные о проверке в КП «Водоканал»</p>
+              </div><a class="yellow-btn" href="#">Заказать поверку</a>
+            </div><img class="check__banner" src="assets/images/check-banner.jpg" alt="">
+          </div>
+        </div>
       </main>
-      <footer class="footer"></footer>
+      <footer class="footer">
+        <ul class="footer__menu">
+          <li class="footer__item"><a class="footer__link" href="#"> 
+              <svg>
+                <use xlink:href="./assets/images/svg/sprite.svg#home"></use>
+              </svg></a></li>
+          <li class="footer__item"><a class="footer__link" href="#"> 
+              <svg>
+                <use xlink:href="./assets/images/svg/sprite.svg#search"></use>
+              </svg></a></li>
+          <li class="footer__item"><a class="footer__link" href="#"> 
+              <svg>
+                <use xlink:href="./assets/images/svg/sprite.svg#market"></use>
+              </svg></a></li>
+          <li class="footer__item"><a class="footer__link" href="#"> 
+              <svg>
+                <use xlink:href="./assets/images/svg/sprite.svg#mail"></use>
+              </svg></a></li>
+        </ul>
+        <ul class="footer__social">  
+          <li class="footer__social-item"> <a class="footer__social-link" href="#"> 
+              <svg>
+                <use xlink:href="./assets/images/svg/sprite.svg#facebook"></use>
+              </svg></a></li>
+          <li class="footer__social-item"> <a class="footer__social-link" href="#"> 
+              <svg>
+                <use xlink:href="./assets/images/svg/sprite.svg#utube"></use>
+              </svg></a></li>
+        </ul>
+      </footer>
+      <div class="overlay"></div>
       <script src="assets/js/main.js"></script>
     </div>
   </body>

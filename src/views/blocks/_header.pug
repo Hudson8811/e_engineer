@@ -1,1 +1,22 @@
 header.header
+    .header__wrapper
+        a.header__logo(href="#")
+            +svg('logo') 
+    
+    ul.header__menu 
+        li.header__item 
+            a.header__link(href="#") Счетчики тепла
+        li.header__item 
+                a.header__link.is--active(href="#") Счетчики воды
+        li.header__item 
+                a.header__link(href="#") Бойлеры
+        li.header__item 
+                a.header__link(href="#") Наши услуги
+    .header__wrapper.header__info
+        a.header__phone(href="tel:+0675134857") (067) 513-48-57
+        a.header__phone(href="tel:+0504873877") (050) 487-38-77
+        p.header__desc 
+            a.header__desc-link(href="#") Контакты
+            span |
+            a.header__desc-link(href="#") Оплата и доставка
+        p.header__disclaimer © 2020 e-engineering

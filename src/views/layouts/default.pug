@@ -21,13 +21,16 @@ html(lang="ru")
 				include ../blocks/_header
 
 			main.main
-				block main
+				.container
+					block main
 
 			block footer
 				include ../blocks/_footer
 			
 			block popups 
 				include ../blocks/_popups
+				
+			.overlay
 
 			block scripts
 				script(src="assets/js/main.js")

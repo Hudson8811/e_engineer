@@ -1,1 +1,33 @@
+body {
+  position: relative;
+  @include font-source-sans(15px, #000, 400, 22px);
+  background-color: #fff;
+}
 
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.main {
+  position: relative;
+  width: calc(100% - 610px);
+  min-height: 100vh;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0px 0px 23px rgba(0, 0, 0, 0.35);
+}
+
+.container {
+  position: relative;
+  @include container(925px, calc(100% - 30px));
+  margin: 0;
+}
+
+.nowrap {
+  white-space: nowrap;
+}

@@ -1,0 +1,27 @@
+.banner {
+  position: relative;
+  padding: 24px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 48px;
+
+  &__text {
+    display: block;
+    padding: 56px 25px 66px 44px;
+    background: #fdea40;
+    max-width: 367px;
+  }
+
+  &__title {
+    display: block;
+    @include font-source-sans(25px, #000, 750, 33px);
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  &__desc {
+    display: block;
+    @include font-source-sans(25px, #000, 600, 33px);
+  }
+}

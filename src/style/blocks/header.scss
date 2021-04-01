@@ -1,0 +1,109 @@
+.header {
+  position: sticky;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 530px;
+  padding: 55px 0 72px;
+  display: flex;
+  flex-direction: column;
+  background: #2d4597;
+  flex-shrink: 0;
+
+  &__wrapper {
+    padding-left: 156px;
+  }
+
+  &__info {
+    margin-top: auto;
+  }
+
+  &__logo {
+    display: block;
+    width: 219px;
+    height: 50px;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__menu {
+    display: block;
+    margin: 65px 0 0;
+  }
+
+  &__item {
+    display: block;
+    width: 100%;
+
+    &:last-child {
+      .header__link {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-left: 151px;
+    @include font-source-sans(25px, #fff, 400, 78px);
+    min-height: 78px;
+    border-bottom: 1px solid #43589e;
+    text-decoration: none;
+    border-left: 5px solid transparent;
+    transition: border 0.2s linear;
+
+    &:before {
+      @include pseudo;
+      @include сentering-y;
+      left: 58px;
+      width: 45px;
+      height: 8px;
+      background: center / cover url(../images/svg/sprite.svg#menu-arrow) no-repeat;
+      transition: opacity 0.2s linear;
+      opacity: 0;
+    }
+
+    &:hover,
+    &.is--active {
+      border-left-color: #fff;
+
+      &:before {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__phone {
+    display: block;
+    text-decoration: none;
+    @include font-source-sans(25px, #fff, 450, 45px);
+  }
+
+  &__desc {
+    display: flex;
+    @include font-source-sans(18px, #96a1c8, 450, 24px);
+    margin: 30px 0 72px;
+
+    span {
+      display: block;
+      padding: 0 16px;
+    }
+
+    &-link {
+      display: block;
+      @include font-source-sans(18px, #96a1c8, 450, 24px);
+      text-decoration: none;
+    }
+  }
+
+  &__disclaimer {
+    display: block;
+    @include font-source-sans(18px, #96a1c8, 450, 24px);
+  }
+}
