@@ -31,3 +31,44 @@ body {
 .nowrap {
   white-space: nowrap;
 }
+
+.water_mater_2_page {
+  .main {
+    background: center / cover url(../images/water-bg.jpg) no-repeat;
+    width: calc(100% - 80px);
+    box-shadow: none;
+    padding: 0 0 0 530px;
+    height: 100vh;
+
+    &:before {
+      @include pseudo;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(37, 47, 80, 0.5);
+    }
+  }
+  .header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    background: rgba(37, 47, 80, 0.6);
+  }
+
+  .header__link {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .header__desc,
+  .header__desc-link,
+  .header__disclaimer {
+    color: #ffffff;
+  }
+
+  .container {
+    margin: 0 auto;
+  }
+}

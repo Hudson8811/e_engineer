@@ -58,3 +58,35 @@
     }
   }
 }
+
+.market-icon {
+  position: relative;
+
+  &-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+
+    span {
+      position: relative;
+      z-index: 2;
+      width: 20px;
+      height: 20px;
+      background: #bad700;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include font-source-sans(12px, #fff, 450, 16px);
+    }
+
+    &:before {
+      @include pseudo;
+      z-index: 1;
+      width: 24px;
+      height: 24px;
+      @include сentering-xy;
+      background: #252f50;
+    }
+  }
+}

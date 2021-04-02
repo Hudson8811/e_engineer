@@ -1,0 +1,23 @@
+.info {
+  margin-bottom: 64px;
+
+  .title {
+    color: #000;
+    max-width: 340px;
+  }
+  p {
+    display: block;
+    color: #414141;
+
+    & + p {
+      margin-top: 15px;
+    }
+  }
+
+  h3 {
+    display: block;
+    margin: 25px 0 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}

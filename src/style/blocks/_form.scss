@@ -1,0 +1,56 @@
+.form {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+
+  &__wrapper {
+    background: #9297c4;
+    padding: 40px 40px 56px;
+    margin-bottom: 44px;
+  }
+
+  &__title {
+    display: block;
+    text-align: center;
+    @include font-source-sans(25px, #fff, 750, 37px);
+    margin-bottom: 16px;
+  }
+
+  &__subtitle {
+    display: block;
+    text-align: center;
+    @include font-source-sans(18px, #fff, 600, 24px);
+  }
+
+  &__input {
+    width: 35.5%;
+    display: block;
+    margin-right: 24px;
+    appearance: none;
+    border: none;
+    background-color: #fff;
+    min-height: 40px;
+    padding: 0 20px;
+    border-radius: 3px;
+    @include font-source-sans(15px, #000, 450, 20px);
+
+    @include input-placeholder {
+      @include font-source-sans(15px, #878e97, 450, 20px);
+    }
+  }
+
+  &__btn {
+    display: block;
+    min-height: 40px;
+    appearance: none;
+    background: #fdea40;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.18);
+    border-radius: 3px;
+    border: none;
+    padding: 5px;
+    margin: 0;
+    @include font-source-sans(15px, #000, 450, 20px);
+    width: 23.4%;
+  }
+}

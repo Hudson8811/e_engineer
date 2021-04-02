@@ -1,0 +1,51 @@
+.reviews {
+  margin-bottom: 64px;
+
+  .title {
+    text-align: center;
+  }
+
+  &__slider {
+    margin: 0 -10px;
+  }
+
+  &__item {
+    display: block;
+    padding: 32px 24px 40px;
+    background: #f3f7fc;
+
+    &-wrapper {
+      display: block;
+      padding: 0 10px;
+    }
+  }
+
+  &__icon {
+    display: block;
+    border-radius: 50%;
+    width: 72px;
+    height: 72px;
+    margin-bottom: 16px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__name {
+    display: block;
+    margin-bottom: 5px;
+    @include font-source-sans(15px, #000, 600, 20px);
+  }
+
+  &__adress {
+    display: block;
+    margin-bottom: 24px;
+    @include font-source-sans(15px, #878e97, 450, 20px);
+  }
+
+  &__desc {
+    display: block;
+    font-style: italic;
+    @include font-source-sans(15px, #000, 400, 22px);
+    font-family: 'Open Sans', sans-serif;
+  }
+}
