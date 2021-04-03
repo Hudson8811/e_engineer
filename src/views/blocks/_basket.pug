@@ -1,0 +1,26 @@
+.basket
+    .basket__heading 
+        p.basket__title Моя корзина
+        .basket__desc Товары (3)
+    
+    .basket__content 
+        -for(i=0;i<3;i++)
+            .basket__item
+                .basket__icon 
+                    img(src="assets/images/counter1.png", alt="")
+                .basket__info
+                    .counters__title Счетчик холодной воды
+                    .counters__name Gross ETW-UA 15Г/110 Ду 15
+                .basket__counts
+                    span.basket__counts-item
+                        +svg('min')
+                    span.basket__counts-content 1
+                    span.basket__counts-item
+                        +svg('max')
+                p.basket__item-price 2 370 грн.
+
+    .basket__result
+        .basket__price Итого: #[b() 6 295 грн.]
+        .basket__btns 
+            a.basket__order(href="#") Оформить заказ
+            a.basket__click(href="#") Купить в 1 клик

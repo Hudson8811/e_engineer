@@ -2,6 +2,10 @@ body {
   position: relative;
   @include font-source-sans(15px, #000, 400, 22px);
   background-color: #fff;
+
+  &.is--active {
+    overflow: hidden;
+  }
 }
 
 .wrapper {
@@ -70,5 +74,20 @@ body {
 
   .container {
     margin: 0 auto;
+  }
+}
+
+.overlay {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(53, 66, 80, 0.82);
+  display: none;
+
+  &.is--active {
+    display: block;
   }
 }

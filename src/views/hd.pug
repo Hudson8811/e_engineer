@@ -1,0 +1,12 @@
+extends layouts/default
+
+block vars
+	-
+		const page = {
+		title: 'Hd page',
+		class: 'hd_page'
+		};
+
+block main
+	include blocks/_counters
+	include blocks/_services_slider

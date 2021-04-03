@@ -1,0 +1,171 @@
+.counters {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+  margin-bottom: 64px;
+
+  &__item {
+    position: relative;
+    width: 33.333%;
+    padding: 30px;
+
+    &:before {
+      @include pseudo;
+      top: 20px;
+      right: 0;
+      background: #dce4ee;
+      height: calc(100% - 40px);
+      width: 1px;
+    }
+
+    &:after {
+      @include pseudo;
+      left: 20px;
+      bottom: 0;
+      width: calc(100% - 40px);
+      height: 1px;
+      background: #dce4ee;
+    }
+
+    &:hover {
+      .counters__name {
+        color: #0569ff;
+      }
+    }
+
+    &:nth-child(3n) {
+      &:before {
+        display: none;
+      }
+    }
+
+    &:nth-last-child(1),
+    &:nth-last-child(2),
+    &:nth-last-child(3) {
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  &__heading {
+    display: block;
+    margin-bottom: 39px;
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 8px;
+    @include font-source-sans(14px, #878e97, 400, 135%);
+  }
+
+  &__name {
+    display: block;
+    @include font-source-sans(15px, #000, 450, 135%);
+  }
+
+  &__image {
+    display: block;
+    max-width: 98%;
+    width: 172px;
+    height: 138px;
+    object-fit: contain;
+    object-position: center;
+    margin: 0 auto 6px;
+  }
+
+  &__indikator {
+    display: block;
+    margin-bottom: 17px;
+
+    svg {
+      display: block;
+      width: 24px;
+      height: 17px;
+      margin-left: auto;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: -15px;
+  }
+
+  &__marker {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 7px 16px 7px 10px;
+    text-decoration: none;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    min-width: 120px;
+    border: 1px solid #dce4ee;
+
+    svg {
+      display: block;
+      width: 18px;
+      height: 18px;
+      margin-right: 7px;
+
+      --svg-fill: #000;
+    }
+
+    span {
+      display: block;
+      @include font-source-sans(13px, #000, 450, 135%);
+      letter-spacing: 0.05em;
+    }
+
+    &.is--active {
+      border-radius: 3px;
+      background: #0569ff;
+      border-color: #0569ff;
+
+      span {
+        color: #fff;
+      }
+
+      svg {
+        --svg-fill: #fff;
+      }
+    }
+
+    &.is--disabled {
+      pointer-events: none;
+      background: #e9eef4;
+      border-radius: 3px;
+      border-color: #e9eef4;
+      margin-right: 34px;
+
+      span {
+        color: #969fab;
+      }
+
+      svg {
+        --svg-fill: #969fab;
+      }
+
+      &:after {
+        @include pseudo;
+        @include сentering-y;
+        right: -24px;
+        width: 14px;
+        height: 14px;
+        background: center / cover url(../images/svg/sprite.svg#close) no-repeat;
+      }
+    }
+  }
+
+  &__price {
+    display: block;
+    margin-bottom: 15px;
+    @include font-source-sans(15px, #000, 450, 135%);
+  }
+}

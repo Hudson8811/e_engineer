@@ -1,0 +1,77 @@
+.services-slider {
+  margin: 0 -10px;
+  &__wrapper {
+    margin-bottom: 64px;
+
+    .title {
+      text-align: center;
+    }
+  }
+
+  &__item {
+    padding: 0 10px;
+
+    .services__item {
+      margin: 0;
+      width: 100%;
+      min-width: 1px;
+    }
+  }
+
+  &__tools {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto 0;
+    padding: 13px 24px;
+    border: 1px solid #dce4ee;
+    border-radius: 42px;
+  }
+
+  &__arrow {
+    width: 9px;
+    height: 16px;
+    cursor: pointer;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__dots {
+    .slick-dots {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 13px;
+
+      li {
+        display: block;
+        margin: 0 10px;
+
+        button {
+          display: block;
+          border: none;
+          font-size: 0;
+          background: #dce4ee;
+          border-radius: 50%;
+          width: 8px;
+          height: 8px;
+          padding: 0;
+          margin: 0;
+        }
+
+        &.slick-active {
+          button {
+            background: #0569ff;
+            width: 12px;
+            height: 12px;
+          }
+        }
+      }
+    }
+  }
+}

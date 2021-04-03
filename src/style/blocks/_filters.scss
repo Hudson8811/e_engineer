@@ -1,0 +1,78 @@
+.filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 24px;
+  background: #edf0f9;
+  margin-bottom: 20px;
+
+  &__sort {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    svg {
+      display: block;
+      width: 20px;
+      height: 30px;
+      margin-left: 16px;
+    }
+
+    span {
+      display: block;
+      @include font-source-sans(14px, #000, 450, 135%);
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    & + & {
+      margin-left: 32px;
+    }
+  }
+
+  &__radio {
+    display: block;
+    margin-right: 8px;
+
+    input {
+      display: none;
+
+      &:checked {
+        & ~ b {
+          &:before {
+            background: #0569ff;
+          }
+        }
+      }
+    }
+
+    b {
+      position: relative;
+      display: block;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 1px solid #dce4ee;
+      cursor: pointer;
+
+      &:before {
+        @include pseudo;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        @include сentering-xy;
+      }
+    }
+  }
+}
