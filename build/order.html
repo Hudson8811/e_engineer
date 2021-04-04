@@ -10,10 +10,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&amp;display=swap" rel="stylesheet">
     <link href="assets/css/main.css" rel="stylesheet">
-    <title>Hd page</title>
+    <title>Order page</title>
   </head>
   <body>
-    <div class="wrapper hd_page">
+    <div class="wrapper order_page">
       <header class="header">
         <div class="header__wrapper"><a class="header__logo" href="#">
             <svg>
@@ -327,6 +327,70 @@
                 </svg>
               </div>
             </div>
+          </div>
+          <div class="order__wrapper">
+            <p class="order__title">Оформление заказа</p>
+            <p class="order__price">На суммму: <b>6 295 грн.</b></p>
+            <form class="order__form">
+              <div class="order__info">
+                <p class="order__label">Общая информация</p>
+                <input class="order__input" type="text" placeholder="Ваше имя">
+                <input class="order__input" type="text" placeholder="Номер телефона">
+                <input class="order__input" type="email" placeholder="Ваш email">
+              </div>
+              <div class="order__info">
+                <p class="order__label">Доставка</p>
+                <div class="order__radio-wrapper">
+                  <div class="filters__item"> 
+                    <label class="filters__radio">
+                      <input type="radio" name="filter"><b> </b>
+                    </label>
+                    <p>Самовывоз</p>
+                  </div>
+                  <div class="filters__item"> 
+                    <label class="filters__radio">
+                      <input type="radio" name="filter"><b> </b>
+                    </label>
+                    <p>Адресная доставка</p>
+                  </div>
+                  <div class="order__inputs"> 
+                    <input class="order__input" type="text" placeholder="Населенный пункт">
+                    <input class="order__input" type="text" placeholder="Улица">
+                    <input class="order__input" type="text" placeholder="№ дома">
+                    <input class="order__input" type="text" placeholder="Подъезд">
+                    <input class="order__input" type="text" placeholder="Этаж">
+                    <input class="order__input" type="text" placeholder="Квартира">
+                  </div>
+                  <div class="filters__item"> 
+                    <label class="filters__radio">
+                      <input type="radio" name="filter"><b> </b>
+                    </label>
+                    <p>Доставка Новой Почтой</p>
+                  </div><a class="order__adress" href="#"> Адрес офиса</a>
+                </div>
+              </div>
+              <div class="order__info">
+                <p class="order__label">Оплата</p>
+                <div class="filters__item"> 
+                  <label class="filters__radio">
+                    <input type="radio" name="order1"><b> </b>
+                  </label>
+                  <p>Наличными</p>
+                </div>
+                <div class="filters__item"> 
+                  <label class="filters__radio">
+                    <input type="radio" name="order1"><b> </b>
+                  </label>
+                  <p>Оплата картой</p>
+                </div>
+                <div class="filters__item"> 
+                  <label class="filters__radio">
+                    <input type="radio" name="order1"><b> </b>
+                  </label>
+                  <p>Оплата онлайн (Liqpay)</p>
+                </div>
+              </div><a class="basket__order" href="#">Оформить заказ</a>
+            </form>
           </div>
           <div class="menu-item" data-id="4">
             <div class="container">

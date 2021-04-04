@@ -91,3 +91,22 @@ body {
     display: block;
   }
 }
+
+.menu-item {
+  position: fixed;
+  right: 80px;
+  top: 0;
+  z-index: 20;
+  height: 100vh;
+  overflow: auto;
+  width: calc(100% - 610px);
+  margin: 0;
+  padding: 20px;
+  background-color: #fff;
+  transition: transform 0.2s linear;
+  transform: translateX(100%);
+
+  &.is--active {
+    transform: translateX(0%);
+  }
+}

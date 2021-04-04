@@ -1,0 +1,47 @@
+.order__wrapper
+    p.order__title Оформление заказа
+    p.order__price На суммму: #[b() 6 295 грн.]
+
+    form.order__form
+        .order__info
+            p.order__label Общая информация
+            input.order__input(type="text" placeholder="Ваше имя")
+            input.order__input(type="text" placeholder="Номер телефона")
+            input.order__input(type="email" placeholder="Ваш email")
+        
+        .order__info
+            p.order__label Доставка
+            .order__radio-wrapper
+                each val in ['Самовывоз', 'Адресная доставка']
+                    .filters__item 
+                        label.filters__radio
+                            input(type="radio", name="filter")
+                            b 
+                        p= val
+            
+                .order__inputs 
+                    input.order__input(type="text" placeholder="Населенный пункт")
+                    input.order__input(type="text" placeholder="Улица")
+                    input.order__input(type="text" placeholder="№ дома")
+                    input.order__input(type="text" placeholder="Подъезд")
+                    input.order__input(type="text" placeholder="Этаж")
+                    input.order__input(type="text" placeholder="Квартира")
+                
+                .filters__item 
+                    label.filters__radio
+                        input(type="radio", name="filter")
+                        b 
+                    p Доставка Новой Почтой
+
+                a.order__adress(href="#")  Адрес офиса
+        
+        .order__info
+            p.order__label Оплата
+            each val in ['Наличными', 'Оплата картой', 'Оплата онлайн (Liqpay)']
+                .filters__item 
+                    label.filters__radio
+                        input(type="radio", name="order1")
+                        b 
+                    p= val
+        
+        a.basket__order(href="#") Оформить заказ

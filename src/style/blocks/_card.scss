@@ -1,0 +1,146 @@
+.card {
+  &__wrapper {
+    position: fixed;
+    top: 0;
+    right: 80px;
+    z-index: 12;
+    height: 100vh;
+    width: 650px;
+    max-width: 100%;
+    overflow: auto;
+    background: #ffffff;
+    padding: 40px 62px 0 40px;
+  }
+
+  &__slider {
+    position: static;
+
+    &-wrapper {
+      position: relative;
+      flex-shrink: 0;
+      width: 204px;
+      height: 204px;
+      border: 1px solid #dce4ee;
+      padding: 21px 19px 45px;
+
+      img {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        object-position: center;
+      }
+
+      .slick-dots {
+        position: absolute;
+        bottom: 16px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        li {
+          margin: 0 4px;
+
+          button {
+            font-size: 0;
+            margin: 0;
+            padding: 0;
+            border: 1px solid #dce4ee;
+            border-radius: 4px;
+            width: 32px;
+            height: 5px;
+            background-color: #fff;
+            cursor: pointer;
+          }
+
+          &.slick-active {
+            button {
+              border-color: #0569ff;
+              background-color: #0569ff;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 40px;
+
+    &-texts {
+      padding-left: 30px;
+    }
+
+    &-btns {
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      margin-top: 32px;
+
+      .counters__marker {
+        justify-content: center;
+        margin-bottom: 0;
+        margin-right: 16px;
+      }
+
+      .basket__click {
+        max-width: 153px;
+      }
+
+      a {
+        flex-grow: 1;
+      }
+    }
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 24px;
+    @include font-source-sans(20px, #000, 600, 135%);
+  }
+
+  &__price {
+    display: block;
+    @include font-source-sans(20px, #0569ff, 600, 135%);
+  }
+
+  &__table {
+    position: relative;
+    padding: 24px;
+    width: 100%;
+    background: #edf0f9;
+    margin-bottom: 32px;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    &:nth-child(2n + 1) {
+      background-color: #fff;
+    }
+    .card__col {
+      &:last-child {
+        text-align: right;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__col {
+    width: 50%;
+    min-height: 32px;
+    padding: 6px 16px;
+  }
+
+  &__description {
+    display: block;
+    @include font-source-sans(13px, #000, 400, 19px);
+  }
+}

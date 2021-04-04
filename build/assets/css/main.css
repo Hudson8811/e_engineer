@@ -166,6 +166,27 @@ body {
   .overlay.is--active {
     display: block; }
 
+.menu-item {
+  position: fixed;
+  right: 80px;
+  top: 0;
+  z-index: 20;
+  height: 100vh;
+  overflow: auto;
+  width: calc(100% - 610px);
+  margin: 0;
+  padding: 20px;
+  background-color: #fff;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: -webkit-transform 0.2s linear;
+  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%); }
+  .menu-item.is--active {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%); }
+
 .title {
   display: block;
   font-family: 'Avenir Next Cyr', Helvetica, Arial, sans-serif;
@@ -312,7 +333,7 @@ body {
   position: sticky;
   right: 0;
   top: 0;
-  z-index: 12;
+  z-index: 100;
   height: 100vh;
   width: 80px;
   display: -webkit-box;
@@ -1257,7 +1278,7 @@ body {
   position: fixed;
   right: 80px;
   top: 0;
-  z-index: 11;
+  z-index: 98;
   width: 737px;
   max-width: 100%;
   background: #ffffff;
@@ -1478,3 +1499,286 @@ body {
     font-weight: 400;
     line-height: 135%;
     text-decoration: none; }
+
+.card__wrapper {
+  position: fixed;
+  top: 0;
+  right: 80px;
+  z-index: 12;
+  height: 100vh;
+  width: 650px;
+  max-width: 100%;
+  overflow: auto;
+  background: #ffffff;
+  padding: 40px 62px 0 40px; }
+
+.card__slider {
+  position: static; }
+  .card__slider-wrapper {
+    position: relative;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    width: 204px;
+    height: 204px;
+    border: 1px solid #dce4ee;
+    padding: 21px 19px 45px; }
+    .card__slider-wrapper img {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+      -o-object-fit: contain;
+         object-fit: contain;
+      -o-object-position: center;
+         object-position: center; }
+    .card__slider-wrapper .slick-dots {
+      position: absolute;
+      bottom: 16px;
+      left: 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      width: 100%; }
+      .card__slider-wrapper .slick-dots li {
+        margin: 0 4px; }
+        .card__slider-wrapper .slick-dots li button {
+          font-size: 0;
+          margin: 0;
+          padding: 0;
+          border: 1px solid #dce4ee;
+          border-radius: 4px;
+          width: 32px;
+          height: 5px;
+          background-color: #fff;
+          cursor: pointer; }
+        .card__slider-wrapper .slick-dots li.slick-active button {
+          border-color: #0569ff;
+          background-color: #0569ff; }
+
+.card__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 40px; }
+  .card__content-texts {
+    padding-left: 30px; }
+  .card__content-btns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    margin-top: 32px; }
+    .card__content-btns .counters__marker {
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      margin-bottom: 0;
+      margin-right: 16px; }
+    .card__content-btns .basket__click {
+      max-width: 153px; }
+    .card__content-btns a {
+      -webkit-box-flex: 1;
+          -ms-flex-positive: 1;
+              flex-grow: 1; }
+
+.card__title {
+  display: block;
+  margin-bottom: 24px;
+  font-family: 'Avenir Next Cyr', Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  color: #000;
+  font-weight: 600;
+  line-height: 135%; }
+
+.card__price {
+  display: block;
+  font-family: 'Avenir Next Cyr', Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  color: #0569ff;
+  font-weight: 600;
+  line-height: 135%; }
+
+.card__table {
+  position: relative;
+  padding: 24px;
+  width: 100%;
+  background: #edf0f9;
+  margin-bottom: 32px; }
+
+.card__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch; }
+  .card__row:nth-child(2n + 1) {
+    background-color: #fff; }
+  .card__row .card__col:last-child {
+    text-align: right;
+    font-weight: 600; }
+
+.card__col {
+  width: 50%;
+  min-height: 32px;
+  padding: 6px 16px; }
+
+.card__description {
+  display: block;
+  font-family: 'Avenir Next Cyr', Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  color: #000;
+  font-weight: 400;
+  line-height: 19px; }
+
+.order__wrapper {
+  position: fixed;
+  top: 0;
+  right: 80px;
+  z-index: 12;
+  background-color: #fff;
+  height: 100vh;
+  overflow: auto;
+  width: 737px;
+  max-width: 100%;
+  padding: 40px 152px 0 56px; }
+  .order__wrapper .basket__order {
+    margin: 73px 0 20px; }
+
+.order__title {
+  display: block;
+  margin-bottom: 15px;
+  font-family: 'Avenir Next Cyr', Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  color: #000;
+  font-weight: 450;
+  line-height: 135%; }
+
+.order__price {
+  display: block;
+  font-family: 'Avenir Next Cyr', Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  color: #000;
+  font-weight: 450;
+  line-height: 135%; }
+  .order__price b {
+    font-weight: 600;
+    color: #0569ff; }
+
+.order__info {
+  margin-top: 32px; }
+  .order__info:last-child {
+    margin-bottom: 32px; }
+  .order__info .filters__item + .filters__item {
+    margin-left: 0;
+    margin-top: 18px; }
+
+.order__label {
+  display: block;
+  margin-bottom: 24px;
+  font-weight: 450; }
+
+.order__input {
+  display: block;
+  width: 100%;
+  margin: 0 0 20px;
+  min-height: 40px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  padding: 1px 16px;
+  border: 1px solid #dce4ee;
+  background: #fff;
+  border-radius: 3px;
+  font-family: 'Avenir Next Cyr', Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  color: #000;
+  font-weight: 400;
+  line-height: 135%; }
+  .order__input:last-child {
+    margin-bottom: 0; }
+  .order__input.placeholder {
+    font-family: 'Avenir Next Cyr', Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    color: #878e97;
+    font-weight: 400;
+    line-height: 135%; }
+  .order__input:-moz-placeholder {
+    font-family: 'Avenir Next Cyr', Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    color: #878e97;
+    font-weight: 400;
+    line-height: 135%; }
+  .order__input::-moz-placeholder {
+    font-family: 'Avenir Next Cyr', Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    color: #878e97;
+    font-weight: 400;
+    line-height: 135%; }
+  .order__input:-ms-input-placeholder {
+    font-family: 'Avenir Next Cyr', Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    color: #878e97;
+    font-weight: 400;
+    line-height: 135%; }
+  .order__input::-webkit-input-placeholder {
+    font-family: 'Avenir Next Cyr', Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    color: #878e97;
+    font-weight: 400;
+    line-height: 135%; }
+
+.order__radio-wrapper {
+  position: relative; }
+  .order__radio-wrapper .filters__item p {
+    color: #878e97; }
+    .order__radio-wrapper .filters__item p.is--active {
+      color: #000000; }
+
+.order__inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 25px 0 33px; }
+  .order__inputs .order__input:nth-child(n + 3) {
+    width: calc(25% - 60px / 4);
+    margin-bottom: 0; }
+
+.order__adress {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  text-decoration: none;
+  font-family: 'Avenir Next Cyr', Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  color: #0569ff;
+  font-weight: 400;
+  line-height: 135%; }

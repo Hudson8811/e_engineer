@@ -3,11 +3,12 @@ extends layouts/default
 block vars
 	-
 		const page = {
-		title: 'Hd page',
-		class: 'hd_page'
+		title: 'Card page',
+		class: 'card_page'
 		};
 
 block main
 	include blocks/_counters
 	include blocks/_services_slider
+	include blocks/_card
 	include blocks/_services

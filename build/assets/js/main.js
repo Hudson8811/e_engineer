@@ -73,4 +73,50 @@ $(document).ready(function(){
             $('body').removeClass('is--active')
         }
     })
+
+    if($('.wrapper').hasClass('card_page')){
+            $('.overlay').addClass('is--active')
+            $('.footer').addClass('is--active')
+            $('body').addClass('is--active')
+    }
+
+    if($('.wrapper').hasClass('order_page')){
+        $('.overlay').addClass('is--active')
+        $('.footer').addClass('is--active')
+        $('body').addClass('is--active')
+}
+
+    $('.card__slider').slick({
+        dots: true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false
+    })
+
+    $('.order__radio-wrapper .filters__item').click(function (){
+        if($(this).children('input').attr('checked', true)){
+            $('.order__radio-wrapper .filters__item p').removeClass('is--active')
+            $(this).children('p').addClass('is--active')
+        }
+    })
+
+
+    $('.header__link').click(function(e){
+        e.preventDefault()
+        const $this = $(this)
+        const id = $this.data('id')
+        if(!$this.hasClass('is--active')){
+            $('.header__link').removeClass('is--active')
+            $this.addClass('is--active')
+            $('.menu-item').removeClass('is--active')
+            $(`.menu-item[data-id="${id}"]`).addClass('is--active')
+            $('body').addClass('is--active')
+        } else{
+            $this.removeClass('is--active')
+            $(`.menu-item[data-id="${id}"]`).removeClass('is--active')
+            $('body').removeClass('is--active')
+        }
+    })
 })
