@@ -1613,16 +1613,19 @@ body {
     bottom: 30px;
     background: #fdea40;
     width: calc(100% - 30px);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
-    padding: 15px 16px 20px; }
+    padding: 15px 16px 20px;
+    display: none; }
+    @media only screen and (max-width: 1247px) {
+      .page_title__special {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; } }
     .page_title__special-title {
       display: block;
       font-family: 'Avenir Next Cyr', Helvetica, Arial, sans-serif;
@@ -1672,7 +1675,8 @@ body {
     .page_title__special-col:first-child {
       -webkit-box-flex: 1;
           -ms-flex-positive: 1;
-              flex-grow: 1; }
+              flex-grow: 1;
+      padding-right: 10px; }
 
 .services {
   display: -webkit-box;
