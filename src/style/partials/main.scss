@@ -249,6 +249,7 @@ body {
 .body_water_mater_2_page {
   overflow: hidden;
   height: 100vh;
+  min-height: -webkit-fill-available;
   height: -webkit-fill-available;
   display: flex;
   flex-direction: column;
