@@ -167,6 +167,9 @@ body {
         padding-left: 300px; } }
     @media only screen and (max-width: 1247px) {
       .water_mater_2_page .main {
+        position: fixed;
+        left: 0;
+        top: 0;
         padding: 0;
         width: 100%; } }
     .water_mater_2_page .main:before {
@@ -1659,7 +1662,7 @@ body {
             transform: translateX(-50%);
     bottom: 30px;
     background: #fdea40;
-    width: calc(100% - 30px);
+    width: 100%;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;

@@ -107,6 +107,9 @@ body {
     }
 
     @include mq('desktop') {
+      position: fixed;
+      left: 0;
+      top: 0;
       padding: 0;
       width: 100%;
     }
