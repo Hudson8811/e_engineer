@@ -56,6 +56,7 @@ body {
 .water_mater_2_page {
   min-height: -webkit-fill-available;
   height: -webkit-fill-available;
+
   .mobile__header {
     @include mq('desktop') {
       background: rgba(37, 47, 80, 0.6);
