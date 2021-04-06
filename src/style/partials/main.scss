@@ -260,6 +260,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: -webkit-fill-available;
+    overflow: hidden;
 
     .container {
       flex-grow: 1;

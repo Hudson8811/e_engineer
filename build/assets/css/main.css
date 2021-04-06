@@ -308,7 +308,8 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    min-height: -webkit-fill-available; }
+    min-height: -webkit-fill-available;
+    overflow: hidden; }
     .body_water_mater_2_page .main .container {
       -webkit-box-flex: 1;
           -ms-flex-positive: 1;
