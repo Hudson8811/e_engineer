@@ -154,6 +154,7 @@ body {
       z-index: 20;
       background-color: transparent;
       padding: 0;
+      height: calc(100% - 174px);
 
       &__wrapper {
         display: none;

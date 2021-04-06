@@ -202,7 +202,8 @@ body {
       top: 174px;
       z-index: 20;
       background-color: transparent;
-      padding: 0; }
+      padding: 0;
+      height: calc(100% - 174px); }
       .water_mater_2_page .header__wrapper {
         display: none; }
       .water_mater_2_page .header .header__menu {
