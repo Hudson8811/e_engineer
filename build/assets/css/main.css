@@ -132,6 +132,7 @@ body {
   white-space: nowrap; }
 
 .water_mater_2_page {
+  overflow: hidden !important;
   min-height: -webkit-fill-available;
   height: -webkit-fill-available; }
   @media only screen and (max-width: 1247px) {
@@ -286,7 +287,7 @@ body {
       display: none; } }
 
 .body_water_mater_2_page {
-  overflow: hidden;
+  overflow: hidden !important;
   height: 100vh;
   min-height: -webkit-fill-available;
   height: -webkit-fill-available;
@@ -309,7 +310,7 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
     min-height: -webkit-fill-available;
-    overflow: hidden; }
+    overflow: hidden !important; }
     .body_water_mater_2_page .main .container {
       -webkit-box-flex: 1;
           -ms-flex-positive: 1;

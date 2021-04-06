@@ -54,6 +54,7 @@ body {
 }
 
 .water_mater_2_page {
+  overflow: hidden !important;
   min-height: -webkit-fill-available;
   height: -webkit-fill-available;
 
@@ -248,7 +249,7 @@ body {
 }
 
 .body_water_mater_2_page {
-  overflow: hidden;
+  overflow: hidden !important;
   height: 100vh;
   min-height: -webkit-fill-available;
   height: -webkit-fill-available;
@@ -260,7 +261,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: -webkit-fill-available;
-    overflow: hidden;
+    overflow: hidden !important;
 
     .container {
       flex-grow: 1;
