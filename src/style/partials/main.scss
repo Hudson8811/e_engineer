@@ -65,7 +65,6 @@ body {
   }
 
   .mobile__header {
-    position: fixed;
     @include mq('desktop') {
       background: rgba(37, 47, 80, 0.6);
 
@@ -108,9 +107,6 @@ body {
     }
 
     @include mq('desktop') {
-      position: fixed;
-      left: 0;
-      top: 0;
       padding: 0;
       width: 100%;
     }
