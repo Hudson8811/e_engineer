@@ -147,8 +147,7 @@ body {
   @media only screen and (max-width: 1247px) {
     .water_mater_2_page .menu-item {
       background: rgba(37, 47, 80, 0.6);
-      overflow: auto;
-      height: calc(100vh - 130px); } }
+      overflow: auto; } }
   .water_mater_2_page .main {
     background: center/cover url(../images/water-bg.jpg) no-repeat;
     width: calc(100% - 80px);

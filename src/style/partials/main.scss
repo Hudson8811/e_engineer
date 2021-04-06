@@ -81,7 +81,6 @@ body {
     @include mq('desktop') {
       background: rgba(37, 47, 80, 0.6);
       overflow: auto;
-      height: calc(100vh - 130px);
     }
   }
   .main {
