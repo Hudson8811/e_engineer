@@ -87,6 +87,7 @@ body {
     box-shadow: none;
     padding: 0 0 0 530px;
     height: 100vh;
+    margin-left: 0;
 
     @include mq('desktop-wide') {
       padding-left: 300px;
@@ -232,4 +233,8 @@ body {
   @include mq('tablet') {
     display: none;
   }
+}
+
+.body_water_mater_2_page {
+  overflow: hidden;
 }

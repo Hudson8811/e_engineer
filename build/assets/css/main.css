@@ -155,7 +155,8 @@ body {
   -webkit-box-shadow: none;
           box-shadow: none;
   padding: 0 0 0 530px;
-  height: 100vh; }
+  height: 100vh;
+  margin-left: 0; }
   @media only screen and (max-width: 1439px) {
     .water_mater_2_page .main {
       padding-left: 300px; } }
@@ -289,6 +290,9 @@ body {
   @media only screen and (max-width: 767px) {
     .more-content {
       display: none; } }
+
+.body_water_mater_2_page {
+  overflow: hidden; }
 
 .title {
   display: block;

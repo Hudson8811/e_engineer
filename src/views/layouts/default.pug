@@ -17,7 +17,7 @@ html(lang="ru")
 		link(href="assets/css/main.css" rel="stylesheet")
 		title= `${page.title}`
 
-	body
+	body(class=page.bodyClass)
 		.wrapper(class=page.class)
 			block header
 				include ../blocks/_header
