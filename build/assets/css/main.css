@@ -79,8 +79,7 @@ body {
   color: #000;
   font-weight: 400;
   line-height: 22px;
-  background-color: #fff;
-  overflow-x: hidden; }
+  background-color: #fff; }
   body.is--active {
     overflow: hidden; }
 
@@ -96,8 +95,7 @@ body {
           justify-content: flex-start;
   -webkit-box-align: start;
       -ms-flex-align: start;
-          align-items: flex-start;
-  overflow-x: hidden; }
+          align-items: flex-start; }
 
 .main {
   position: relative;

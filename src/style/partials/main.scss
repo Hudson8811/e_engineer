@@ -2,7 +2,6 @@ body {
   position: relative;
   @include font-source-sans(15px, #000, 400, 22px);
   background-color: #fff;
-  overflow-x: hidden;
 
   &.is--active {
     overflow: hidden;
@@ -16,7 +15,6 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  overflow-x: hidden;
 }
 
 .main {

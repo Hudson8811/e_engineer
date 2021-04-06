@@ -129,6 +129,7 @@ $(document).ready(function(){
         } else{
             if($this.hasClass('back')){
                 $this.removeClass('back')
+                $('.mobile-menu__wrapper').removeClass('abs')
                 $('.menu-item').removeClass('is--active')
                 
             } else{
@@ -136,7 +137,6 @@ $(document).ready(function(){
                 $('.mobile-menu__wrapper').removeClass('is--active')
                 $('.overlay').removeClass('is--active')
             }
-            
         }
     })
 
