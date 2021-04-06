@@ -1470,36 +1470,42 @@ body {
     color: #000;
     font-weight: 450;
     line-height: 20px; }
-    .form__input.placeholder {
-      font-family: 'Avenir Next Cyr', Helvetica, Arial, sans-serif;
-      font-size: 15px;
-      color: #878e97;
-      font-weight: 450;
-      line-height: 40px; }
-    .form__input:-moz-placeholder {
-      font-family: 'Avenir Next Cyr', Helvetica, Arial, sans-serif;
-      font-size: 15px;
-      color: #878e97;
-      font-weight: 450;
-      line-height: 40px; }
-    .form__input::-moz-placeholder {
-      font-family: 'Avenir Next Cyr', Helvetica, Arial, sans-serif;
-      font-size: 15px;
-      color: #878e97;
-      font-weight: 450;
-      line-height: 40px; }
-    .form__input:-ms-input-placeholder {
-      font-family: 'Avenir Next Cyr', Helvetica, Arial, sans-serif;
-      font-size: 15px;
-      color: #878e97;
-      font-weight: 450;
-      line-height: 40px; }
     .form__input::-webkit-input-placeholder {
       font-family: 'Avenir Next Cyr', Helvetica, Arial, sans-serif;
       font-size: 15px;
       color: #878e97;
       font-weight: 450;
-      line-height: 40px; }
+      line-height: 135%; }
+    .form__input::-moz-placeholder {
+      font-family: 'Avenir Next Cyr', Helvetica, Arial, sans-serif;
+      font-size: 15px;
+      color: #878e97;
+      font-weight: 450;
+      line-height: 135%; }
+    .form__input:-ms-input-placeholder {
+      font-family: 'Avenir Next Cyr', Helvetica, Arial, sans-serif;
+      font-size: 15px;
+      color: #878e97;
+      font-weight: 450;
+      line-height: 135%; }
+    .form__input::-ms-input-placeholder {
+      font-family: 'Avenir Next Cyr', Helvetica, Arial, sans-serif;
+      font-size: 15px;
+      color: #878e97;
+      font-weight: 450;
+      line-height: 135%; }
+    .form__input::placeholder {
+      font-family: 'Avenir Next Cyr', Helvetica, Arial, sans-serif;
+      font-size: 15px;
+      color: #878e97;
+      font-weight: 450;
+      line-height: 135%; }
+    .form__input::-moz-placeholder {
+      font-family: 'Avenir Next Cyr', Helvetica, Arial, sans-serif;
+      font-size: 15px;
+      color: #878e97;
+      font-weight: 450;
+      line-height: 39px; }
     @media only screen and (max-width: 767px) {
       .form__input {
         width: 100%; }
@@ -1537,7 +1543,7 @@ body {
           line-height: 135%; } }
   .form__btn {
     display: block;
-    min-height: 40px;
+    height: 40px;
     -webkit-appearance: none;
        -moz-appearance: none;
             appearance: none;
@@ -2809,31 +2815,37 @@ body {
   line-height: 135%; }
   .order__input:last-child {
     margin-bottom: 0; }
-  .order__input.placeholder {
+  .order__input::-webkit-input-placeholder {
     font-family: 'Avenir Next Cyr', Helvetica, Arial, sans-serif;
     font-size: 15px;
     color: #878e97;
     font-weight: 400;
-    line-height: 40px; }
-  .order__input:-moz-placeholder {
-    font-family: 'Avenir Next Cyr', Helvetica, Arial, sans-serif;
-    font-size: 15px;
-    color: #878e97;
-    font-weight: 400;
-    line-height: 40px; }
+    line-height: 135%; }
   .order__input::-moz-placeholder {
     font-family: 'Avenir Next Cyr', Helvetica, Arial, sans-serif;
     font-size: 15px;
     color: #878e97;
     font-weight: 400;
-    line-height: 40px; }
+    line-height: 135%; }
   .order__input:-ms-input-placeholder {
     font-family: 'Avenir Next Cyr', Helvetica, Arial, sans-serif;
     font-size: 15px;
     color: #878e97;
     font-weight: 400;
-    line-height: 40px; }
-  .order__input::-webkit-input-placeholder {
+    line-height: 135%; }
+  .order__input::-ms-input-placeholder {
+    font-family: 'Avenir Next Cyr', Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    color: #878e97;
+    font-weight: 400;
+    line-height: 135%; }
+  .order__input::placeholder {
+    font-family: 'Avenir Next Cyr', Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    color: #878e97;
+    font-weight: 400;
+    line-height: 135%; }
+  .order__input:-moz-placeholder {
     font-family: 'Avenir Next Cyr', Helvetica, Arial, sans-serif;
     font-size: 15px;
     color: #878e97;

@@ -74,7 +74,11 @@
       margin-bottom: 0;
     }
 
-    @include input-placeholder {
+    &::placeholder {
+      @include font-source-sans(15px, #878e97, 400, 135%);
+    }
+
+    &:-moz-placeholder {
       @include font-source-sans(15px, #878e97, 400, 40px);
     }
   }
