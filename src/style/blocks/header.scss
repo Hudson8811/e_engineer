@@ -1,6 +1,5 @@
 .header {
-  position: sticky;
-  position: -webkit-sticky;
+  position: fixed;
   left: 0;
   top: 0;
   height: 100vh;
@@ -297,6 +296,7 @@
     align-items: center;
     margin-left: 40px;
     margin-top: 29px;
+    text-decoration: none;
 
     svg {
       display: block;
@@ -317,7 +317,7 @@
     left: 0;
     top: 56px;
     z-index: 30;
-    position: fixed;
+    position: absolute;
     background: #2f3d6c;
     transition: transform 0.2s linear;
     padding-bottom: 30px;

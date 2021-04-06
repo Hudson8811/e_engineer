@@ -95,7 +95,8 @@ body {
           justify-content: flex-start;
   -webkit-box-align: start;
       -ms-flex-align: start;
-          align-items: flex-start; }
+          align-items: flex-start;
+  overflow: hidden; }
 
 .main {
   position: relative;
@@ -105,14 +106,17 @@ body {
   background: #ffffff;
   -webkit-box-shadow: 0px 0px 23px rgba(0, 0, 0, 0.35);
           box-shadow: 0px 0px 23px rgba(0, 0, 0, 0.35);
-  overflow: hidden; }
+  overflow: hidden;
+  margin-left: 530px; }
   @media only screen and (max-width: 1439px) {
     .main {
-      width: calc(100% - 380px); } }
+      width: calc(100% - 380px);
+      margin-left: 300px; } }
   @media only screen and (max-width: 1247px) {
     .main {
       width: 100%;
-      padding: 71px 0 0; } }
+      padding: 71px 0 0;
+      margin-left: 0; } }
 
 .container {
   display: block;
@@ -337,8 +341,7 @@ body {
       letter-spacing: 0.05em; } }
 
 .header {
-  position: sticky;
-  position: -webkit-sticky;
+  position: fixed;
   left: 0;
   top: 0;
   height: 100vh;
@@ -610,7 +613,8 @@ body {
         -ms-flex-align: center;
             align-items: center;
     margin-left: 40px;
-    margin-top: 29px; }
+    margin-top: 29px;
+    text-decoration: none; }
     .mobile-menu__lang svg {
       display: block;
       width: 20px;
@@ -629,7 +633,7 @@ body {
     left: 0;
     top: 56px;
     z-index: 30;
-    position: fixed;
+    position: absolute;
     background: #2f3d6c;
     -webkit-transition: -webkit-transform 0.2s linear;
     transition: -webkit-transform 0.2s linear;
@@ -708,8 +712,7 @@ body {
         line-height: 135%; }
 
 .footer {
-  position: sticky;
-  position: -webkit-sticky;
+  position: fixed;
   right: 0;
   top: 0;
   z-index: 100;
@@ -2139,13 +2142,30 @@ body {
       width: 20px;
       height: 30px;
       margin-left: 16px; }
-    .filters__sort span {
+    .filters__sort select {
+      -webkit-appearance: none;
+         -moz-appearance: none;
+              appearance: none;
+      background-color: transparent;
+      border: none;
+      border-radius: none;
+      padding: 0;
+      margin: 0;
+      -webkit-box-flex: 1;
+          -ms-flex-positive: 1;
+              flex-grow: 1;
       display: block;
       font-family: 'Avenir Next Cyr', Helvetica, Arial, sans-serif;
       font-size: 14px;
       color: #000;
       font-weight: 450;
       line-height: 135%; }
+      .filters__sort select option {
+        font-family: 'Avenir Next Cyr', Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        font-weight: 450;
+        line-height: 135%; }
   .filters__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;

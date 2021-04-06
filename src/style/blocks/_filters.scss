@@ -62,9 +62,20 @@
       margin-left: 16px;
     }
 
-    span {
+    select {
+      appearance: none;
+      background-color: transparent;
+      border: none;
+      border-radius: none;
+      padding: 0;
+      margin: 0;
+      flex-grow: 1;
       display: block;
       @include font-source-sans(14px, #000, 450, 135%);
+
+      option {
+        @include font-source-sans(14px, #000, 450, 135%);
+      }
     }
   }
 

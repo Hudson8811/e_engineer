@@ -15,6 +15,7 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+  overflow: hidden;
 }
 
 .main {
@@ -25,14 +26,17 @@ body {
   background: #ffffff;
   box-shadow: 0px 0px 23px rgba(0, 0, 0, 0.35);
   overflow: hidden;
+  margin-left: 530px;
 
   @include mq('desktop-wide') {
     width: calc(100% - 380px);
+    margin-left: 300px;
   }
 
   @include mq('desktop') {
     width: 100%;
     padding: 71px 0 0;
+    margin-left: 0;
   }
 }
 
