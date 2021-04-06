@@ -131,98 +131,92 @@ body {
 .nowrap {
   white-space: nowrap; }
 
-@media only screen and (max-width: 1247px) {
-  .water_mater_2_page .mobile__header {
-    background: rgba(37, 47, 80, 0.6); }
-    .water_mater_2_page .mobile__header .mobile__header-burger {
-      background: rgba(74, 85, 120, 0.35); }
-    .water_mater_2_page .mobile__header .market-icon .market-icon-count:before {
-      background: rgba(37, 47, 80, 0.6); } }
-
-@media only screen and (max-width: 1247px) {
-  .water_mater_2_page .mobile-menu__wrapper {
-    background: rgba(37, 47, 80, 0.6); } }
-
-@media only screen and (max-width: 1247px) {
-  .water_mater_2_page .menu-item {
-    background: rgba(37, 47, 80, 0.6);
-    overflow: auto;
-    height: calc(100vh - 130px); } }
-
-.water_mater_2_page .main {
-  background: center/cover url(../images/water-bg.jpg) no-repeat;
-  width: calc(100% - 80px);
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  padding: 0 0 0 530px;
-  height: 100%;
-  margin-left: 0; }
-  .water_mater_2_page .main .container {
-    height: 100%; }
-  @media only screen and (max-width: 1439px) {
-    .water_mater_2_page .main {
-      padding-left: 300px; } }
+.water_mater_2_page {
+  min-height: -webkit-fill-available;
+  height: -webkit-fill-available; }
   @media only screen and (max-width: 1247px) {
-    .water_mater_2_page .main {
-      padding: 0;
-      width: 100%; } }
-  .water_mater_2_page .main:before {
-    content: "";
-    display: block;
-    position: absolute;
-    z-index: 1;
+    .water_mater_2_page .mobile__header {
+      background: rgba(37, 47, 80, 0.6); }
+      .water_mater_2_page .mobile__header .mobile__header-burger {
+        background: rgba(74, 85, 120, 0.35); }
+      .water_mater_2_page .mobile__header .market-icon .market-icon-count:before {
+        background: rgba(37, 47, 80, 0.6); } }
+  @media only screen and (max-width: 1247px) {
+    .water_mater_2_page .mobile-menu__wrapper {
+      background: rgba(37, 47, 80, 0.6); } }
+  @media only screen and (max-width: 1247px) {
+    .water_mater_2_page .menu-item {
+      background: rgba(37, 47, 80, 0.6);
+      overflow: auto;
+      height: calc(100vh - 130px); } }
+  .water_mater_2_page .main {
+    background: center/cover url(../images/water-bg.jpg) no-repeat;
+    width: calc(100% - 80px);
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    padding: 0 0 0 530px;
+    height: 100%;
+    margin-left: 0; }
+    .water_mater_2_page .main .container {
+      height: 100%; }
+    @media only screen and (max-width: 1439px) {
+      .water_mater_2_page .main {
+        padding-left: 300px; } }
+    @media only screen and (max-width: 1247px) {
+      .water_mater_2_page .main {
+        padding: 0;
+        width: 100%; } }
+    .water_mater_2_page .main:before {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(37, 47, 80, 0.5); }
+      @media only screen and (max-width: 1247px) {
+        .water_mater_2_page .main:before {
+          top: 56px; } }
+  .water_mater_2_page .header {
+    position: fixed;
     left: 0;
     top: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(37, 47, 80, 0.5); }
-    @media only screen and (max-width: 1247px) {
-      .water_mater_2_page .main:before {
-        top: 56px; } }
-
-.water_mater_2_page .header {
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 2;
-  background: rgba(37, 47, 80, 0.6); }
-
-.water_mater_2_page .header__link {
-  border-bottom-color: rgba(255, 255, 255, 0.1); }
-
-.water_mater_2_page .header__desc,
-.water_mater_2_page .header__desc-link,
-.water_mater_2_page .header__disclaimer {
-  color: #ffffff; }
-
-.water_mater_2_page .container {
-  margin: 0 auto; }
-
-@media only screen and (max-width: 1247px) {
-  .water_mater_2_page .header {
-    display: block;
-    width: 100%;
-    top: 174px;
-    z-index: 20;
-    background-color: transparent;
-    padding: 0; }
-    .water_mater_2_page .header__wrapper {
-      display: none; }
-    .water_mater_2_page .header .header__menu {
-      margin-top: 0; }
+    z-index: 2;
+    background: rgba(37, 47, 80, 0.6); }
+  .water_mater_2_page .header__link {
+    border-bottom-color: rgba(255, 255, 255, 0.1); }
+  .water_mater_2_page .header__desc,
+  .water_mater_2_page .header__desc-link,
+  .water_mater_2_page .header__disclaimer {
+    color: #ffffff; }
+  .water_mater_2_page .container {
+    margin: 0 auto; }
+  @media only screen and (max-width: 1247px) {
+    .water_mater_2_page .header {
+      display: block;
+      width: 100%;
+      top: 174px;
+      z-index: 20;
+      background-color: transparent;
+      padding: 0; }
+      .water_mater_2_page .header__wrapper {
+        display: none; }
+      .water_mater_2_page .header .header__menu {
+        margin-top: 0; }
+      .water_mater_2_page .header .header__link {
+        border-left: 0;
+        padding: 0;
+        text-align: center; } }
+  @media only screen and (max-width: 767px) {
     .water_mater_2_page .header .header__link {
-      border-left: 0;
-      padding: 0;
-      text-align: center; } }
-
-@media only screen and (max-width: 767px) {
-  .water_mater_2_page .header .header__link {
-    min-height: 41px;
-    font-family: 'Avenir Next Cyr', Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    color: #fff;
-    font-weight: 450;
-    line-height: 41px; } }
+      min-height: 41px;
+      font-family: 'Avenir Next Cyr', Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      color: #fff;
+      font-weight: 450;
+      line-height: 41px; } }
 
 .overlay {
   position: absolute;
