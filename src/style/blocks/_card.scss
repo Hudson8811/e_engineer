@@ -10,6 +10,13 @@
     overflow: auto;
     background: #ffffff;
     padding: 40px 62px 0 40px;
+
+    @include mq('desktop') {
+      padding: 15px;
+      right: 0;
+      top: 56px;
+      height: calc(100vh - 56px);
+    }
   }
 
   &__slider {
@@ -23,12 +30,21 @@
       border: 1px solid #dce4ee;
       padding: 21px 19px 45px;
 
+      @include mq('phone-wide') {
+        margin: 0 auto;
+        width: 100%;
+      }
+
       img {
         display: block;
         max-width: 100%;
         max-height: 100%;
         object-fit: contain;
         object-position: center;
+
+        @include mq('phone-wide') {
+          margin: 0 auto;
+        }
       }
 
       .slick-dots {
@@ -72,8 +88,16 @@
     align-items: flex-start;
     margin-bottom: 40px;
 
+    @include mq('phone-wide') {
+      display: block;
+    }
+
     &-texts {
       padding-left: 30px;
+      @include mq('phone-wide') {
+        padding-left: 0;
+        padding-top: 20px;
+      }
     }
 
     &-btns {
@@ -82,18 +106,35 @@
       align-items: stretch;
       margin-top: 32px;
 
+      @include mq('tablet') {
+        display: block;
+        margin-top: 10px;
+      }
+
       .counters__marker {
         justify-content: center;
         margin-bottom: 0;
         margin-right: 16px;
+
+        @include mq('tablet') {
+          margin-right: 0;
+          margin-bottom: 16px;
+        }
       }
 
       .basket__click {
         max-width: 153px;
+
+        @include mq('tablet') {
+          max-width: none;
+        }
       }
 
       a {
         flex-grow: 1;
+        @include mq('tablet') {
+          min-height: 40px;
+        }
       }
     }
   }
@@ -102,6 +143,11 @@
     display: block;
     margin-bottom: 24px;
     @include font-source-sans(20px, #000, 600, 135%);
+
+    @include mq('tablet') {
+      @include font-source-sans(16px, #000, 600, 135%);
+      margin-bottom: 10px;
+    }
   }
 
   &__price {
@@ -115,6 +161,10 @@
     width: 100%;
     background: #edf0f9;
     margin-bottom: 32px;
+
+    @include mq('tablet') {
+      padding: 10px;
+    }
   }
 
   &__row {
@@ -137,6 +187,10 @@
     width: 50%;
     min-height: 32px;
     padding: 6px 16px;
+
+    @include mq('tablet') {
+      font-size: 13px;
+    }
   }
 
   &__description {

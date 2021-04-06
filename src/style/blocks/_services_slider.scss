@@ -27,6 +27,14 @@
     padding: 13px 24px;
     border: 1px solid #dce4ee;
     border-radius: 42px;
+
+    @include mq('tablet') {
+      width: 100%;
+
+      .services-slider__dots {
+        flex-grow: 1;
+      }
+    }
   }
 
   &__arrow {

@@ -6,4 +6,6 @@
                 +svg('check')
                 p.check__item-text= item
         +yellow-btn('Заказать поверку')
-    img.check__banner(src="assets/images/check-banner.jpg", alt="")
+    picture.check__banner
+        source(srcset="assets/images/check-banner-mobile.jpg" media="(max-width: 767px)")
+        img(src="assets/images/check-banner.jpg", alt="")

@@ -17,7 +17,12 @@ $(document).ready(function(){
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    arrows: true,
+                    dots: true,
+                    appendDots: $('.reviews__slider-tools .services-slider__dots'),
+                    prevArrow: $('.reviews__slider-tools .services-slider__prev'),
+                    nextArrow: $('.reviews__slider-tools .services-slider__next')
                 }
             }
         ]
@@ -118,5 +123,52 @@ $(document).ready(function(){
             $(`.menu-item[data-id="${id}"]`).removeClass('is--active')
             $('body').removeClass('is--active')
         }
+    })
+
+    $('.mobile__header-burger').click(function(e){
+        e.preventDefault()
+        const $this = $(this)
+        if(!$this.hasClass('is--active')){
+            $this.addClass('is--active')
+            $('.mobile-menu__wrapper').addClass('is--active')
+            $('.overlay').addClass('is--active')
+        } else{
+            if($this.hasClass('back')){
+                $this.removeClass('back')
+                $('.menu-item').removeClass('is--active')
+                
+            } else{
+                $this.removeClass('is--active')
+                $('.mobile-menu__wrapper').removeClass('is--active')
+                $('.overlay').removeClass('is--active')
+            }
+            
+        }
+    })
+
+    $('.more-btn').click(function(e){
+        e.preventDefault()
+        const $this = $(this)
+        $this.addClass('is--active')
+        $this.parents('.info').children('.more-content').slideDown()
+    })
+
+    $('.mobile-menu__link').click(function(e){
+        const id = $(this).data('id')
+        e.preventDefault()
+        $('.menu-item').removeClass('is--active')
+        $(`.menu-item[data-id="${id}"]`).addClass('is--active')
+        $('.overlay').addClass('is--active')
+        $('.mobile-menu__wrapper').addClass('abs')
+        $('.mobile__header-burger').addClass('back')
+    })
+
+    $('.filters__btn').click(function(e){
+        e.preventDefault()
+        const id = $(this).data('id')
+        if($(window).width() < 768){
+            $(`.filters__wrapper[data-id="${id}"]`).slideToggle()
+        }
+        
     })
 })

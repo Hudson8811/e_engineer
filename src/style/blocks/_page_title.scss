@@ -11,5 +11,78 @@
     justify-content: center;
     align-items: center;
     padding-bottom: 98px;
+
+    @include mq('desktop') {
+      height: auto;
+      min-height: 100vh;
+      align-items: flex-start;
+      padding-top: 80px;
+    }
+  }
+
+  @include mq('desktop') {
+    @include font-source-sans(40px, #fff, 700, 125%);
+    min-height: 94px;
+    text-align: center;
+  }
+
+  @include mq('tablet') {
+    @include font-source-sans(20px, #fff, 700, 125%);
+  }
+
+  &__special {
+    position: fixed;
+    z-index: 21;
+    @include сentering-x;
+    bottom: 30px;
+    background: #fdea40;
+    width: calc(100% - 30px);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 15px 16px 20px;
+
+    &-title {
+      display: block;
+      @include font-source-sans(13px, #000, 750, 135%);
+      margin-bottom: 8px;
+    }
+
+    &-desc {
+      display: block;
+      @include font-source-sans(13px, #000, 600, 135%);
+    }
+
+    &-sileprice {
+      display: block;
+      position: relative;
+      @include font-source-sans(15px, #000, 450, 135%);
+      margin-bottom: 5px;
+      text-align: right;
+
+      &:before {
+        @include pseudo;
+        width: 42px;
+        height: 1px;
+        background-color: #ff0000;
+        left: 50%;
+        top: 50%;
+        margin-top: -1px;
+        margin-left: -21px;
+        transform: rotate(30deg);
+      }
+    }
+
+    &-price {
+      display: block;
+      text-align: right;
+      @include font-source-sans(24px, #000, 700, 24px);
+    }
+
+    &-col {
+      &:first-child {
+        flex-grow: 1;
+      }
+    }
   }
 }

@@ -20,3 +20,41 @@ header.header
             span |
             a.header__desc-link(href="#") Оплата и доставка
         p.header__disclaimer © 2020 e-engineering
+
+header.mobile__header
+    .container
+        a.mobile__header-logo(href="#")
+            +svg('logo') 
+        
+        a.footer__link.market-icon(href="#") 
+            +svg('market')
+            span.market-icon-count 
+                span 2
+
+        a.mobile__header-burger(href="#") 
+            span
+
+.mobile-menu__wrapper 
+    .mobile-menu__search
+        input(type="text", name="search", placeholder="Поиск по сайту").mobile-menu__search-input
+        +svg('search')
+    
+    ul.mobile-menu
+        li.mobile-menu__item
+            a.mobile-menu__link(href="#", data-id="1") Счетчики тепла
+        li.mobile-menu__item
+            a.mobile-menu__link(href="#", data-id="2") Счетчики воды
+        li.mobile-menu__item
+            a.mobile-menu__link(href="#", data-id="3") Бойлеры
+        li.mobile-menu__item
+            a.mobile-menu__link(href="#", data-id="4") Наши услуги
+        li.mobile-menu__item
+            a.mobile-menu__link(href="#", data-id="5") Контакты
+        li.mobile-menu__item
+            a.mobile-menu__link(href="#", data-id="6") Оплата и доставка
+    
+    a.mobile-menu__phones(href="tel:(067) 513-48-57") (067) 513-48-57
+    a.mobile-menu__phones(href="tel:(050) 487-38-77") (050) 487-38-77
+    a.mobile-menu__lang(href="#")
+        +svg('lang')
+        span Укр

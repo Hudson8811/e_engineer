@@ -6,11 +6,26 @@
   background-repeat: no-repeat;
   margin-bottom: 48px;
 
+  @include mq('tablet') {
+    height: 160px;
+    margin-bottom: 140px;
+  }
+
   &__text {
     display: block;
     padding: 56px 25px 66px 44px;
     background: #fdea40;
     max-width: 367px;
+
+    @include mq('tablet') {
+      position: absolute;
+      left: 0;
+      top: 100%;
+      max-width: none;
+      width: 100%;
+      padding: 16px;
+      min-height: 108px;
+    }
   }
 
   &__title {
@@ -18,10 +33,19 @@
     @include font-source-sans(25px, #000, 750, 33px);
     text-transform: uppercase;
     margin-bottom: 24px;
+
+    @include mq('tablet') {
+      @include font-source-sans(16px, #000, 750, 135%);
+      margin-bottom: 12px;
+    }
   }
 
   &__desc {
     display: block;
     @include font-source-sans(25px, #000, 600, 33px);
+
+    @include mq('tablet') {
+      @include font-source-sans(16px, #000, 600, 135%);
+    }
   }
 }

@@ -2,6 +2,7 @@ body {
   position: relative;
   @include font-source-sans(15px, #000, 400, 22px);
   background-color: #fff;
+  overflow-x: hidden;
 
   &.is--active {
     overflow: hidden;
@@ -15,6 +16,7 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+  overflow-x: hidden;
 }
 
 .main {
@@ -24,12 +26,25 @@ body {
   padding: 20px;
   background: #ffffff;
   box-shadow: 0px 0px 23px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+
+  @include mq('desktop-wide') {
+    width: calc(100% - 380px);
+  }
+
+  @include mq('desktop') {
+    width: 100%;
+    padding: 71px 0 0;
+  }
 }
 
 .container {
-  position: relative;
   @include container(925px, calc(100% - 30px));
   margin: 0;
+
+  @include mq('desktop') {
+    margin: 0 auto;
+  }
 }
 
 .nowrap {
@@ -37,12 +52,48 @@ body {
 }
 
 .water_mater_2_page {
+  .mobile__header {
+    @include mq('desktop') {
+      background: rgba(37, 47, 80, 0.6);
+
+      .mobile__header-burger {
+        background: rgba(74, 85, 120, 0.35);
+      }
+
+      .market-icon .market-icon-count:before {
+        background: rgba(37, 47, 80, 0.6);
+      }
+    }
+  }
+
+  .mobile-menu__wrapper {
+    @include mq('desktop') {
+      background: rgba(37, 47, 80, 0.6);
+    }
+  }
+
+  .menu-item {
+    @include mq('desktop') {
+      background: rgba(37, 47, 80, 0.6);
+      overflow: auto;
+      height: calc(100vh - 130px);
+    }
+  }
   .main {
     background: center / cover url(../images/water-bg.jpg) no-repeat;
     width: calc(100% - 80px);
     box-shadow: none;
     padding: 0 0 0 530px;
     height: 100vh;
+
+    @include mq('desktop-wide') {
+      padding-left: 300px;
+    }
+
+    @include mq('desktop') {
+      padding: 0;
+      width: 100%;
+    }
 
     &:before {
       @include pseudo;
@@ -52,6 +103,10 @@ body {
       right: 0;
       bottom: 0;
       background: rgba(37, 47, 80, 0.5);
+
+      @include mq('desktop') {
+        top: 56px;
+      }
     }
   }
   .header {
@@ -74,6 +129,38 @@ body {
 
   .container {
     margin: 0 auto;
+  }
+
+  .header {
+    @include mq('desktop') {
+      display: block;
+      width: 100%;
+      top: 174px;
+      z-index: 20;
+      background-color: transparent;
+      padding: 0;
+
+      &__wrapper {
+        display: none;
+      }
+
+      .header__menu {
+        margin-top: 0;
+      }
+
+      .header__link {
+        border-left: 0;
+        padding: 0;
+        text-align: center;
+      }
+    }
+
+    @include mq('tablet') {
+      .header__link {
+        min-height: 41px;
+        @include font-source-sans(16px, #fff, 450, 41px);
+      }
+    }
   }
 }
 
@@ -106,7 +193,41 @@ body {
   transition: transform 0.2s linear;
   transform: translateX(100%);
 
+  @include mq('desktop-wide') {
+    width: calc(100% - 380px);
+  }
+
+  @include mq('desktop') {
+    width: 100%;
+    right: 0;
+    top: 130px;
+    z-index: 80;
+    background: #2f3d6c;
+    padding: 0;
+    min-height: fit-content;
+    height: fit-content;
+    position: absolute;
+    overflow: hidden;
+    padding: 0 0 32px;
+  }
+
   &.is--active {
     transform: translateX(0%);
+  }
+}
+
+.more-btn {
+  @include font-source-sans(13px, #414141, 400, 135%);
+  text-decoration: underline;
+
+  &.is--active {
+    display: none;
+  }
+}
+.more-content {
+  margin-top: 15px;
+
+  @include mq('tablet') {
+    display: none;
   }
 }

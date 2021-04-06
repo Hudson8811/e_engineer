@@ -4,10 +4,19 @@
   justify-content: space-between;
   align-items: stretch;
 
+  @include mq('tablet') {
+    display: block;
+    margin-top: 20px;
+  }
+
   &__wrapper {
     background: #9297c4;
     padding: 40px 40px 56px;
     margin-bottom: 44px;
+
+    @include mq('tablet') {
+      padding: 24px 16px 32px;
+    }
   }
 
   &__title {
@@ -15,12 +24,21 @@
     text-align: center;
     @include font-source-sans(25px, #fff, 750, 37px);
     margin-bottom: 16px;
+
+    @include mq('tablet') {
+      @include font-source-sans(20px, #fff, 750, 135%);
+      margin-bottom: 12px;
+    }
   }
 
   &__subtitle {
     display: block;
     text-align: center;
     @include font-source-sans(18px, #fff, 600, 24px);
+
+    @include mq('tablet') {
+      @include font-source-sans(13px, #fff, 600, 135%);
+    }
   }
 
   &__input {
@@ -38,6 +56,18 @@
     @include input-placeholder {
       @include font-source-sans(15px, #878e97, 450, 20px);
     }
+
+    @include mq('tablet') {
+      width: 100%;
+
+      & + & {
+        margin-top: 12px;
+      }
+
+      @include input-placeholder {
+        @include font-source-sans(13px, #878e97, 450, 135%);
+      }
+    }
   }
 
   &__btn {
@@ -52,5 +82,10 @@
     margin: 0;
     @include font-source-sans(15px, #000, 450, 20px);
     width: 23.4%;
+
+    @include mq('tablet') {
+      width: 100%;
+      margin-top: 24px;
+    }
   }
 }

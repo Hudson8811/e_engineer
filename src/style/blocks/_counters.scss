@@ -6,10 +6,19 @@
   flex-wrap: wrap;
   margin-bottom: 64px;
 
+  @include mq('tablet') {
+    display: block;
+  }
+
   &__item {
     position: relative;
     width: 33.333%;
     padding: 30px;
+
+    @include mq('tablet') {
+      width: 100%;
+      padding: 20px 20px 32px;
+    }
 
     &:before {
       @include pseudo;
@@ -18,6 +27,10 @@
       background: #dce4ee;
       height: calc(100% - 40px);
       width: 1px;
+
+      @include mq('tablet') {
+        display: none;
+      }
     }
 
     &:after {
@@ -27,6 +40,11 @@
       width: calc(100% - 40px);
       height: 1px;
       background: #dce4ee;
+
+      @include mq('tablet') {
+        left: 0;
+        width: 100%;
+      }
     }
 
     &:hover {
@@ -41,9 +59,9 @@
       }
     }
 
-    &:nth-last-child(1),
     &:nth-last-child(2),
-    &:nth-last-child(3) {
+    &:nth-last-child(3),
+    &:nth-last-child(4) {
       &:after {
         display: none;
       }
@@ -167,5 +185,35 @@
     display: block;
     margin-bottom: 15px;
     @include font-source-sans(15px, #000, 450, 135%);
+  }
+
+  &__more {
+    position: relative;
+    width: 100%;
+    min-height: 40px;
+    border: 1px solid #dce4ee;
+    border-radius: 4px;
+    padding: 0 40px;
+    text-decoration: none;
+    display: none;
+
+    @include mq('tablet') {
+      display: block;
+    }
+
+    span {
+      display: block;
+      text-align: center;
+      @include font-source-sans(14px, #000, 450, 40px);
+    }
+
+    svg {
+      position: absolute;
+      @include сentering-y;
+      right: 16px;
+      display: block;
+      width: 18px;
+      height: 18px;
+    }
   }
 }

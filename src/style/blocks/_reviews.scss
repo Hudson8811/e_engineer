@@ -1,18 +1,44 @@
 .reviews {
   margin-bottom: 64px;
 
+  @include mq('tablet') {
+    margin-bottom: 32px;
+  }
+
   .title {
     text-align: center;
+
+    @include mq('tablet') {
+      text-align: left;
+    }
   }
 
   &__slider {
     margin: 0 -10px;
+
+    &-tools.services-slider__tools {
+      margin-top: 24px;
+      display: none;
+
+      @include mq('tablet') {
+        display: flex;
+        width: 100%;
+
+        .services-slider__dots {
+          flex-grow: 1;
+        }
+      }
+    }
   }
 
   &__item {
     display: block;
     padding: 32px 24px 40px;
     background: #f3f7fc;
+
+    @include mq('tablet') {
+      padding: 16px 16px 48px;
+    }
 
     &-wrapper {
       display: block;
@@ -28,18 +54,33 @@
     margin-bottom: 16px;
     object-fit: cover;
     object-position: center;
+
+    @include mq('tablet') {
+      width: 56px;
+      height: 56px;
+      margin-bottom: 0;
+    }
   }
 
   &__name {
     display: block;
     margin-bottom: 5px;
     @include font-source-sans(15px, #000, 600, 20px);
+
+    @include mq('tablet') {
+      @include font-source-sans(13px, #000, 600, 135%);
+    }
   }
 
   &__adress {
     display: block;
     margin-bottom: 24px;
     @include font-source-sans(15px, #878e97, 450, 20px);
+
+    @include mq('tablet') {
+      @include font-source-sans(13px, #878e97, 450, 135%);
+      margin-bottom: 0;
+    }
   }
 
   &__desc {
@@ -47,5 +88,33 @@
     font-style: italic;
     @include font-source-sans(15px, #000, 400, 22px);
     font-family: 'Open Sans', sans-serif;
+
+    @include mq('tablet') {
+      @include font-source-sans(13px, #000, 400, 150%);
+    }
+  }
+
+  &__contain {
+    @include mq('tablet') {
+      position: relative;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding-bottom: 16px;
+      margin-bottom: 16px;
+
+      &:before {
+        @include pseudo;
+        bottom: 0;
+        left: -16px;
+        width: calc(100% + 32px);
+        height: 1px;
+        background: #dce4ee;
+      }
+
+      &-text {
+        padding-left: 13px;
+      }
+    }
   }
 }

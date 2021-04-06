@@ -10,8 +10,20 @@
   background: #2d4597;
   flex-shrink: 0;
 
+  @include mq('desktop-wide') {
+    width: 300px;
+  }
+
+  @include mq('desktop') {
+    display: none;
+  }
+
   &__wrapper {
     padding-left: 156px;
+
+    @include mq('desktop-wide') {
+      padding-left: 10px;
+    }
   }
 
   &__info {
@@ -58,6 +70,10 @@
     border-left: 5px solid transparent;
     transition: border 0.2s linear;
 
+    @include mq('desktop-wide') {
+      padding-left: 10px;
+    }
+
     &:before {
       @include pseudo;
       @include сentering-y;
@@ -67,6 +83,10 @@
       background: center / cover url(../images/svg/sprite.svg#menu-arrow) no-repeat;
       transition: opacity 0.2s linear;
       opacity: 0;
+
+      @include mq('desktop-wide') {
+        display: none;
+      }
     }
 
     &:hover,
@@ -105,5 +125,248 @@
   &__disclaimer {
     display: block;
     @include font-source-sans(18px, #96a1c8, 450, 24px);
+  }
+}
+
+.mobile__header {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 56px;
+  background: #2d4597;
+
+  .container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+  }
+
+  &-logo {
+    display: block;
+    width: 117px;
+    height: 27px;
+    margin-right: auto;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .market-icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .market-icon-count:before {
+      background: #2d4597;
+    }
+  }
+
+  &-burger {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    background: #3f57aa;
+    transition: 0.2s linear;
+
+    span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: #fff;
+      transition: 0.2s linear;
+
+      &:before,
+      &:after {
+        @include pseudo;
+        width: 20px;
+        height: 2px;
+        background: #fff;
+        transition: 0.2s linear;
+      }
+
+      &:before {
+        top: 16px;
+      }
+
+      &:after {
+        bottom: 16px;
+      }
+    }
+
+    &.is--active {
+      background: #2f3d6c;
+      span {
+        background: transparent;
+
+        &:before {
+          top: calc(50% - 1px);
+          transform: rotate(45deg);
+        }
+
+        &:after {
+          bottom: calc(50% - 1px);
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
+    &.back.is--active {
+      span {
+        width: 12px;
+        &:before,
+        &:after {
+          width: 12px;
+        }
+
+        &:before {
+          top: calc(50% - 5px);
+          transform: rotate(-45deg);
+        }
+
+        &:after {
+          bottom: calc(50% - 5px);
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+
+  @include mq('desktop') {
+    display: block;
+  }
+}
+
+.mobile-menu {
+  position: relative;
+  padding: 24px 40px 40px;
+  margin-bottom: 16px;
+
+  &:before {
+    @include pseudo;
+    left: 40px;
+    bottom: 0;
+    width: calc(100% - 80px);
+    height: 1px;
+    background: #434f78;
+  }
+
+  &__item {
+    & + & {
+      margin-top: 15px;
+    }
+  }
+
+  &__link {
+    display: block;
+    @include font-source-sans(15px, #fff, 450, 18px);
+    text-decoration: none;
+  }
+
+  &__phones {
+    display: block;
+    margin-left: 40px;
+    @include font-source-sans(15px, #fff, 450, 135%);
+    text-decoration: none;
+
+    & + & {
+      margin-top: 5px;
+    }
+  }
+
+  &__lang {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 40px;
+    margin-top: 29px;
+
+    svg {
+      display: block;
+      width: 20px;
+      height: 14px;
+      margin-right: 10px;
+    }
+
+    span {
+      display: block;
+      @include font-source-sans(15px, #fff, 450, 135%);
+    }
+  }
+
+  &__wrapper {
+    width: 100%;
+    height: auto;
+    left: 0;
+    top: 56px;
+    z-index: 30;
+    position: fixed;
+    background: #2f3d6c;
+    transition: transform 0.2s linear;
+    padding-bottom: 30px;
+    transform: translateX(100%);
+    display: none;
+
+    @include mq('desktop') {
+      display: block;
+    }
+
+    &.is--active {
+      transform: translateX(0);
+    }
+
+    &.abs {
+      position: absolute;
+    }
+  }
+
+  &__search {
+    position: relative;
+    width: 100%;
+    height: 52px;
+    border-bottom: 1px solid #434f78;
+
+    svg {
+      position: absolute;
+      @include сentering-y;
+      right: 18px;
+      width: 20px;
+      height: 20px;
+      display: block;
+    }
+
+    &-input {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+      padding: 0 50px 0 15px;
+      margin: 0;
+      border: none;
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      appearance: none;
+
+      @include input-placeholder {
+        @include font-source-sans(14px, #6b7597, 400, 135%);
+      }
+    }
   }
 }

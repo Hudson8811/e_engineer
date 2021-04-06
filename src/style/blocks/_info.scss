@@ -1,6 +1,10 @@
 .info {
   margin-bottom: 64px;
 
+  @include mq('tablet') {
+    margin-bottom: 32px;
+  }
+
   .title {
     color: #000;
     max-width: 340px;
@@ -8,6 +12,10 @@
   p {
     display: block;
     color: #414141;
+
+    @include mq('tablet') {
+      @include font-source-sans(13px, #414141, 400, 135%);
+    }
 
     & + p {
       margin-top: 15px;
@@ -19,5 +27,8 @@
     margin: 25px 0 15px;
     font-weight: 600;
     text-transform: uppercase;
+    @include mq('tablet') {
+      @include font-source-sans(13px, #414141, 450, 135%);
+    }
   }
 }

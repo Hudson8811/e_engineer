@@ -6,10 +6,54 @@
   background: #edf0f9;
   margin-bottom: 20px;
 
+  @include mq('tablet') {
+    display: block;
+    background-color: transparent;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  &__type {
+    display: none;
+
+    svg {
+      display: block;
+      width: 20px;
+      height: 20px;
+    }
+
+    span {
+      display: block;
+      @include font-source-sans(14px, #000, 450, 135%);
+    }
+
+    @include mq('tablet') {
+      display: flex;
+    }
+  }
+
+  &__btn {
+    @include mq('tablet') {
+      min-height: 48px;
+      background: #edf0f9;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 12px 0 16px;
+
+      .filters__wrapper + & {
+        margin-top: 4px;
+      }
+    }
+  }
+
   &__sort {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+
+    @include mq('tablet') {
+      justify-content: space-between;
+    }
 
     svg {
       display: block;
@@ -28,6 +72,11 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+
+    @include mq('tablet') {
+      display: none;
+      padding: 20px 0;
+    }
   }
 
   &__item {
@@ -37,6 +86,11 @@
 
     & + & {
       margin-left: 32px;
+
+      @include mq('tablet') {
+        margin-left: 0;
+        margin-top: 10px;
+      }
     }
   }
 

@@ -1,5 +1,8 @@
-.filters 
-    .filters__wrapper
+.filters
+    .filters__btn.filters__type(data-id="1")
+        span Фильтр по типу счетчика
+        +svg('filt')
+    .filters__wrapper(data-id="1")
         .filters__item 
             label.filters__radio
                 input(type="radio", name="filter")
@@ -15,6 +18,6 @@
                 input(type="radio", name="filter")
                 b 
             p Все счетчики
-    .filters__sort
+    .filters__btn.filters__sort
         span Параметры сортировки
         +svg('sort')

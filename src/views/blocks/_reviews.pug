@@ -4,7 +4,16 @@
         -for (i=0;i<5;i++)
             .reviews__item-wrapper
                 .reviews__item
-                    img.reviews__icon(src="assets/images/reviews-icon.png", alt="")
-                    p.reviews__name Михаил Юрьевич
-                    p.reviews__adress г. Киев, ул. Антоновича 64
+                    .reviews__contain
+                        img.reviews__icon(src="assets/images/reviews-icon.png", alt="")
+                        .reviews__contain-text
+                            p.reviews__name Михаил Юрьевич
+                            p.reviews__adress г. Киев, ул. Антоновича 64
                     p.reviews__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            
+    .services-slider__tools.reviews__slider-tools
+        .services-slider__arrow.services-slider__prev
+            +svg('prev')
+        .services-slider__dots
+        .services-slider__arrow.services-slider__next
+            +svg('next')

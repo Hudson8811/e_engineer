@@ -71,4 +71,21 @@
       height: 100%;
     }
   }
+
+  @include mq('tablet') {
+    .services__price,
+    .services__desc {
+      font-size: 13px;
+      line-height: 135%;
+    }
+
+    .services__item {
+      min-height: 193px;
+    }
+
+    .services__fire {
+      width: 21px;
+      height: 27px;
+    }
+  }
 }

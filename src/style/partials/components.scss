@@ -2,6 +2,11 @@
   display: block;
   @include font-source-sans(25px, #000, 750, 33px);
   margin-bottom: 40px;
+
+  @include mq('tablet') {
+    @include font-source-sans(20px, #000, 700, 135%);
+    margin-bottom: 16px;
+  }
 }
 
 .yellow-btn {
@@ -16,4 +21,10 @@
   text-decoration: none;
   text-transform: uppercase;
   @include font-source-sans(15px, #000, 600, 20px);
+
+  @include mq('phone-wide') {
+    @include font-source-sans(13px, #000, 600, 135%);
+    text-transform: none;
+    letter-spacing: 0.05em;
+  }
 }

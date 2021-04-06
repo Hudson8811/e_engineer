@@ -5,6 +5,11 @@
   align-items: flex-start;
   margin-bottom: 64px;
 
+  @include mq('tablet') {
+    margin-bottom: 40px;
+    flex-direction: column;
+  }
+
   &__items {
     width: calc(100% - 325px);
     display: flex;
@@ -13,6 +18,12 @@
     flex-wrap: wrap;
     margin-bottom: -20px;
     margin-right: auto;
+
+    @include mq('tablet') {
+      width: 100%;
+      margin-bottom: 0;
+      display: block;
+    }
   }
 
   &__item {
@@ -23,6 +34,31 @@
     background: #f3f7fc;
     text-align: center;
     padding: 36px 24px 50px;
+
+    @include mq('tablet') {
+      position: relative;
+      width: 100%;
+      margin-bottom: 0;
+      padding: 16px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      &:before {
+        @include pseudo;
+        width: calc(100% - 32px);
+        height: 1px;
+        left: 16px;
+        bottom: 0;
+        background: #dce4ee;
+      }
+
+      &:last-child {
+        &:before {
+          display: none;
+        }
+      }
+    }
 
     &:nth-child(2n) {
       margin-right: 0;
@@ -36,6 +72,11 @@
       border-radius: 50%;
       background: #2d4597;
       padding: 10px;
+      flex-shrink: 0;
+
+      @include mq('tablet') {
+        margin: 0;
+      }
 
       svg {
         display: block;
@@ -49,22 +90,45 @@
       margin: 0 auto;
       @include font-source-sans(15px, #000, 600, 20px);
       max-width: 172px;
+
+      @include mq('tablet') {
+        max-width: none;
+        margin: 0;
+        padding-left: 19px;
+        text-align: left;
+        @include font-source-sans(13px, #000, 600, 135%);
+      }
     }
   }
 
   &__text {
     width: 273px;
+
+    @include mq('tablet') {
+      width: 100%;
+      order: -1;
+      margin-bottom: 32px;
+    }
   }
 
   &__desc {
     display: block;
     margin-bottom: 50px;
     font-weight: 450;
+
+    @include mq('tablet') {
+      @include font-source-sans(13px, #000, 400, 135%);
+      margin-bottom: 16px;
+    }
   }
 
   &__link {
     display: block;
     @include font-source-sans(15px, #0569ff, 600, 22px);
     text-decoration-line: underline;
+
+    @include mq('tablet') {
+      @include font-source-sans(13px, #0569ff, 450, 150%);
+    }
   }
 }

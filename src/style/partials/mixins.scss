@@ -144,7 +144,6 @@ $breakpoints: (
 }
 
 @mixin container($max-width, $width) {
-  position: relative;
   display: block;
   width: $width;
   max-width: $max-width;
