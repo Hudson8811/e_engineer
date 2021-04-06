@@ -75,7 +75,7 @@
     }
 
     @include input-placeholder {
-      @include font-source-sans(15px, #878e97, 400, 135%);
+      @include font-source-sans(15px, #878e97, 400, 40px);
     }
   }
 

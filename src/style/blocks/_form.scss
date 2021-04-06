@@ -54,7 +54,7 @@
     @include font-source-sans(15px, #000, 450, 20px);
 
     @include input-placeholder {
-      @include font-source-sans(15px, #878e97, 450, 20px);
+      @include font-source-sans(15px, #878e97, 450, 40px);
     }
 
     @include mq('tablet') {
