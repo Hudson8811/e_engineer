@@ -65,6 +65,7 @@ body {
   }
 
   .mobile__header {
+    position: fixed;
     @include mq('desktop') {
       background: rgba(37, 47, 80, 0.6);
 
