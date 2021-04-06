@@ -260,12 +260,7 @@ body {
       z-index: 80;
       background: #2f3d6c;
       padding: 0;
-      min-height: -webkit-fit-content;
-      min-height: -moz-fit-content;
-      min-height: fit-content;
-      height: -webkit-fit-content;
-      height: -moz-fit-content;
-      height: fit-content;
+      height: calc(100% - 130px);
       position: absolute;
       overflow: hidden;
       padding: 0 0 32px; } }
