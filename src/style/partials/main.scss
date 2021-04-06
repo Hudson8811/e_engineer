@@ -57,6 +57,12 @@ body {
   min-height: -webkit-fill-available;
   height: -webkit-fill-available;
 
+  @include mq('desktop') {
+    .basket {
+      height: calc(100% - 56px);
+    }
+  }
+
   .mobile__header {
     @include mq('desktop') {
       background: rgba(37, 47, 80, 0.6);

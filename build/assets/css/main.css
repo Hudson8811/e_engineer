@@ -135,6 +135,9 @@ body {
   min-height: -webkit-fill-available;
   height: -webkit-fill-available; }
   @media only screen and (max-width: 1247px) {
+    .water_mater_2_page .basket {
+      height: calc(100% - 56px); } }
+  @media only screen and (max-width: 1247px) {
     .water_mater_2_page .mobile__header {
       background: rgba(37, 47, 80, 0.6); }
       .water_mater_2_page .mobile__header .mobile__header-burger {
