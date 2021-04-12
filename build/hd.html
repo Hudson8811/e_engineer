@@ -451,7 +451,7 @@
               <svg>
                 <use xlink:href="./assets/images/svg/sprite.svg#home"></use>
               </svg></a></li>
-          <li class="footer__item"><a class="footer__link" href="#"> 
+          <li class="footer__item"><a class="footer__link" id="search-btn" href="#"> 
               <svg>
                 <use xlink:href="./assets/images/svg/sprite.svg#search"></use>
               </svg></a></li>
@@ -459,7 +459,7 @@
               <svg>
                 <use xlink:href="./assets/images/svg/sprite.svg#market"></use>
               </svg><span class="market-icon-count"> <span>2</span></span></a></li>
-          <li class="footer__item"><a class="footer__link" href="#"> 
+          <li class="footer__item"><a class="footer__link" id="message-btn" href="#"> 
               <svg>
                 <use xlink:href="./assets/images/svg/sprite.svg#mail"></use>
               </svg></a></li>
@@ -475,6 +475,29 @@
               </svg></a></li>
         </ul>
       </footer>
+      <div class="modal" id="modal-1" style="display: none;"> 
+        <form class="modal-content">
+          <div class="title">Оформить заявку на услугу</div>
+          <input class="form__input" type="text" placeholder="Ваш номер телефона">
+          <button class="form__btn">Оформить заявку</button>
+        </form>
+      </div>
+      <div class="modal" id="snx" style="display: none;"> 
+        <form class="modal-content">
+          <div class="title">Ваша заявка успешно отправлена!</div>
+        </form>
+      </div>
+      <div class="desktop-search">
+        <div class="mobile-menu__search">
+          <input class="mobile-menu__search-input" type="text" name="search" placeholder="Поиск по сайту">
+          <svg>
+            <use xlink:href="./assets/images/svg/sprite.svg#search"></use>
+          </svg>
+        </div>
+        <div class="desktop-search__content">
+          <Lorem>ipsum dolor sit amet consectetur adipisicing elit. Fugit nostrum officia exercitationem quibusdam eos reprehenderit assumenda quo magnam ex perferendis quam illum itaque culpa sint cumque, corrupti libero veniam quod.</Lorem>
+        </div>
+      </div>
       <div class="overlay"></div>
       <script src="assets/js/main.js"></script>
     </div>

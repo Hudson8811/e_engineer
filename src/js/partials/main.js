@@ -73,6 +73,23 @@ $(document).ready(function(){
         }
     })
 
+    $('#search-btn').click(function(e){
+        e.preventDefault()
+        if(!$(this).hasClass('is--active')){
+            $(this).addClass('is--active')
+            $('.desktop-search').addClass('is--active')
+            $('.overlay').addClass('is--active')
+            $('.footer').addClass('is--active')
+            $('body').addClass('is--active')
+        } else{
+            $(this).removeClass('is--active')
+            $('.desktop-search').removeClass('is--active')
+            $('.overlay').removeClass('is--active')
+            $('.footer').removeClass('is--active')
+            $('body').removeClass('is--active')
+        }
+    })
+
     if($('.wrapper').hasClass('card_page')){
             $('.overlay').addClass('is--active')
             $('.footer').addClass('is--active')
@@ -164,5 +181,30 @@ $(document).ready(function(){
             $(`.filters__wrapper[data-id="${id}"]`).slideToggle()
         }
         
+    })
+
+    $('#message-btn').click(function(e){
+        e.preventDefault()
+        $.fancybox.open({
+            src  : '#modal-1',
+            type : 'inline',
+            opts : {
+                afterShow : function( instance, current ) {
+                    console.info( 'done!' );
+                }
+            }
+        });
+    })
+
+    $('.modal .form__btn').click(function(e){
+        e.preventDefault()
+        $.fancybox.close({
+            src  : '#modal-1',
+            type : 'inline',
+        });
+        $.fancybox.open({
+            src  : '#snx',
+            type : 'inline',
+        });
     })
 })

@@ -1,4 +1,5 @@
 @import url(libs/fonts.css);
+@import url(libs/jquery.fancybox.min.css);
 @import url(libs/reset.css);
 /* Slider */
 .slick-slider {
@@ -326,6 +327,47 @@ body {
         -webkit-box-flex: 1;
             -ms-flex-positive: 1;
                 flex-grow: 1; }
+
+.modal .title {
+  margin-bottom: 20px; }
+
+.modal .form__input,
+.modal .form__btn {
+  width: 100%;
+  margin-top: 10px; }
+
+.modal .form__input {
+  border: 1px solid #878e97; }
+
+#snx .title {
+  margin-bottom: 0; }
+
+.desktop-search {
+  position: fixed;
+  right: 80px;
+  top: 0;
+  z-index: 98;
+  width: 737px;
+  max-width: 100%;
+  padding: 40px 20px;
+  height: 100vh;
+  overflow: auto;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  background: #2f3d6c;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%); }
+  @media only screen and (max-width: 1247px) {
+    .desktop-search {
+      display: none; } }
+  .desktop-search__content {
+    margin-top: 20px;
+    color: #fff; }
+    .desktop-search__content p {
+      color: #fff; }
+  .desktop-search.is--active {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%); }
 
 .title {
   display: block;

@@ -274,3 +274,56 @@ body {
     }
   }
 }
+
+.modal {
+  .title {
+    margin-bottom: 20px;
+  }
+  .form__input,
+  .form__btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .form__input {
+    border: 1px solid #878e97;
+  }
+}
+
+#snx {
+  .title {
+    margin-bottom: 0;
+  }
+}
+
+.desktop-search {
+  position: fixed;
+  right: 80px;
+  top: 0;
+  z-index: 98;
+  width: 737px;
+  max-width: 100%;
+  padding: 40px 20px;
+  height: 100vh;
+  overflow: auto;
+  transition: all 0.2s linear;
+  background: #2f3d6c;
+  transform: translateX(100%);
+
+  @include mq('desktop') {
+    display: none;
+  }
+
+  &__content {
+    margin-top: 20px;
+    color: #fff;
+
+    p {
+      color: #fff;
+    }
+  }
+
+  &.is--active {
+    transform: translateX(0%);
+  }
+}
