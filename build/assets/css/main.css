@@ -1816,7 +1816,8 @@ body {
     padding: 16px;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    text-decoration: none; }
     .services__item:before {
       content: "";
       display: block;

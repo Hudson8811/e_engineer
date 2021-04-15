@@ -19,6 +19,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    text-decoration: none;
 
     &:before {
       @include pseudo;
