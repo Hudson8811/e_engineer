@@ -10,6 +10,12 @@
     overflow: auto;
     background: #ffffff;
     padding: 40px 62px 0 40px;
+    transition: all 0.2s linear;
+    transform: translateX(100%);
+
+    &.is--active {
+      transform: translateX(0%);
+    }
 
     @include mq('desktop') {
       padding: 15px;

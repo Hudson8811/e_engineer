@@ -2667,7 +2667,14 @@ body {
   max-width: 100%;
   overflow: auto;
   background: #ffffff;
-  padding: 40px 62px 0 40px; }
+  padding: 40px 62px 0 40px;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%); }
+  .card__wrapper.is--active {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%); }
   @media only screen and (max-width: 1247px) {
     .card__wrapper {
       padding: 15px;
@@ -2865,7 +2872,14 @@ body {
   overflow: auto;
   width: 737px;
   max-width: 100%;
-  padding: 40px 152px 0 56px; }
+  padding: 40px 152px 0 56px;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%); }
+  .order__wrapper.is--active {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%); }
   .order__wrapper .basket__order {
     margin: 73px 0 20px; }
   @media only screen and (max-width: 1247px) {

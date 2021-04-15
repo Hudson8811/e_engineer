@@ -90,17 +90,41 @@ $(document).ready(function(){
         }
     })
 
-    if($('.wrapper').hasClass('card_page')){
+    $('.card-modal').click(function(e){
+        e.preventDefault()
+        if(!$(this).hasClass('is--active')){
+            $(this).addClass('is--active')
+            $('.card__wrapper').addClass('is--active')
             $('.overlay').addClass('is--active')
             $('.footer').addClass('is--active')
             $('body').addClass('is--active')
-    }
+        } else{
+            $(this).removeClass('is--active')
+            $('.card__wrapper').removeClass('is--active')
+            $('.overlay').removeClass('is--active')
+            $('.footer').removeClass('is--active')
+            $('body').removeClass('is--active')
+        }
+    })
 
-    if($('.wrapper').hasClass('order_page')){
-        $('.overlay').addClass('is--active')
-        $('.footer').addClass('is--active')
-        $('body').addClass('is--active')
-}
+    $('.order-modal').click(function(e){
+        e.preventDefault()
+        if(!$(this).hasClass('is--active')){
+            $(this).addClass('is--active')
+            $('.order__wrapper').addClass('is--active')
+            $('.overlay').addClass('is--active')
+            $('.footer').addClass('is--active')
+            $('body').addClass('is--active')
+        } else{
+            $(this).removeClass('is--active')
+            $('.order__wrapper').removeClass('is--active')
+            $('.overlay').removeClass('is--active')
+            $('.footer').removeClass('is--active')
+            $('body').removeClass('is--active')
+        }
+    })
+
+
 
     $('.card__slider').slick({
         dots: true,
