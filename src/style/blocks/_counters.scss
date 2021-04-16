@@ -23,7 +23,7 @@
     &:before {
       @include pseudo;
       top: 20px;
-      right: 0;
+      left: 0;
       background: #dce4ee;
       height: calc(100% - 40px);
       width: 1px;
@@ -53,17 +53,29 @@
       }
     }
 
-    &:nth-child(3n) {
+    &:nth-child(3n + 1) {
       &:before {
         display: none;
       }
     }
 
+    &:nth-last-child(1),
     &:nth-last-child(2),
-    &:nth-last-child(3),
-    &:nth-last-child(4) {
+    &:nth-last-child(3) {
       &:after {
         display: none;
+
+        @include mq('tablet') {
+          display: block;
+        }
+      }
+    }
+
+    &:nth-last-child(1) {
+      @include mq('tablet') {
+        &:after {
+          display: none;
+        }
       }
     }
   }
