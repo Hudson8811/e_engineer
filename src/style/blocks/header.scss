@@ -371,3 +371,26 @@
     }
   }
 }
+
+.wrapper {
+  @media only screen and (min-width: 1248px) and (max-width: 1439px) {
+    .header__disclaimer {
+      font-size: 14px;
+    }
+
+    .header__link {
+      min-height: 50px;
+      font-size: 18px;
+      line-height: 50px;
+    }
+
+    .header__phone {
+      font-size: 18px;
+      line-height: 30px;
+    }
+
+    .header__desc-link {
+      font-size: 14px;
+    }
+  }
+}

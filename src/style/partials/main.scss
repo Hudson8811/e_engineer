@@ -328,3 +328,24 @@ body {
     transform: translateX(0%);
   }
 }
+
+.counters__grid {
+  .counters {
+    margin-left: -20px;
+
+    @include mq('tablet') {
+      margin-left: 0;
+    }
+  }
+}
+
+.services__grid {
+  .services__item {
+    min-width: 210px;
+
+    @include mq('tablet') {
+      min-width: 1px;
+      width: 100%;
+    }
+  }
+}

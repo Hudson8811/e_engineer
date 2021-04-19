@@ -1,0 +1,13 @@
+extends layouts/default
+
+block vars
+	-
+		const page = {
+		title: 'Search page',
+		class: 'search_page'
+		};
+
+block main
+	include blocks/_filters
+	include blocks/_counters_grid
+	include blocks/_services_grid

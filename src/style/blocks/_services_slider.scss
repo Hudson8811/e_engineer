@@ -29,8 +29,15 @@
     border: 1px solid #dce4ee;
     border-radius: 42px;
 
+    &.no-on-desc {
+      display: none;
+    }
     @include mq('tablet') {
       width: 100%;
+
+      &.no-on-desc {
+        display: flex;
+      }
 
       .services-slider__dots {
         flex-grow: 1;
