@@ -1,5 +1,31 @@
 .counters__grid
     +title('Результаты поиска по каталогу по запросу "sensus"')
+    .filters
+        .filters__btn.filters__type(data-id="1")
+            span Фильтр по типу счетчика
+            +svg('filt')
+        .filters__wrapper(data-id="1")
+            .filters__item 
+                label.filters__radio
+                    input(type="radio", name="filter")
+                    b 
+                p Холодная вода
+            .filters__item 
+                label.filters__radio
+                    input(type="radio", name="filter")
+                    b 
+                p Горячая вода
+            .filters__item 
+                label.filters__radio
+                    input(type="radio", name="filter")
+                    b 
+                p Все счетчики
+        .filters__btn.filters__sort
+            select
+                option(value="1") Параметры сортировки 
+                option(value="2") Параметры сортировки 
+                option(value="3") Параметры сортировки
+
     .counters
         .counters__item 
             .counters__heading 
