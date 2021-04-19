@@ -2105,7 +2105,8 @@ body {
     .services-slider__wrapper .title {
       text-align: center; }
   .services-slider__item {
-    padding: 0 10px; }
+    padding: 0 10px;
+    text-decoration: none; }
     .services-slider__item .services__item {
       margin: 0;
       width: 100%;
