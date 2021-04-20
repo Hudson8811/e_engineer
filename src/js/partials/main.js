@@ -90,6 +90,17 @@ $(document).ready(function(){
         }
     })
 
+    $('.card-modal, .card__close').click(function(e){
+        e.preventDefault()
+        $('.card__wrapper').removeClass('is--active')
+        $('.overlay').removeClass('is--active')
+        $('.footer').removeClass('is--active')
+        $('body').removeClass('is--active')
+    })
+
+    
+
+    
     $('.card-modal').click(function(e){
         e.preventDefault()
         if(!$(this).hasClass('is--active')){
