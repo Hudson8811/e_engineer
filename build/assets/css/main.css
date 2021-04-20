@@ -839,6 +839,20 @@ body {
   transition: -webkit-box-shadow 0.2s linear;
   transition: box-shadow 0.2s linear;
   transition: box-shadow 0.2s linear, -webkit-box-shadow 0.2s linear; }
+  .footer__lang {
+    display: block;
+    text-decoration: none;
+    font-weight: 450;
+    font-size: 14px;
+    line-height: 150%;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 80px; }
+    .footer__lang svg {
+      display: block;
+      width: 26px;
+      height: 20px;
+      margin: 0 auto 2px; }
   @media only screen and (max-width: 1247px) {
     .footer {
       display: none; } }

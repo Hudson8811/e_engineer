@@ -12,6 +12,24 @@
   padding: 41px 24px 72px;
   transition: box-shadow 0.2s linear;
 
+  &__lang {
+    display: block;
+    text-decoration: none;
+    font-weight: 450;
+    font-size: 14px;
+    line-height: 150%;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 80px;
+
+    svg {
+      display: block;
+      width: 26px;
+      height: 20px;
+      margin: 0 auto 2px;
+    }
+  }
+
   @include mq('desktop') {
     display: none;
   }
