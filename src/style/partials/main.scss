@@ -28,7 +28,7 @@ body {
   overflow: hidden;
   margin-left: 530px;
 
-  @include mq('desktop-wide') {
+  @media only screen and (max-width: 1700px) {
     width: calc(100% - 380px);
     margin-left: 300px;
   }
@@ -103,7 +103,7 @@ body {
       height: 100%;
     }
 
-    @include mq('desktop-wide') {
+    @media only screen and (max-width: 1700px) {
       padding-left: 300px;
     }
 

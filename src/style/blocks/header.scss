@@ -10,7 +10,7 @@
   background: #2d4597;
   flex-shrink: 0;
 
-  @include mq('desktop-wide') {
+  @media only screen and (max-width: 1700px) {
     width: 300px;
   }
 
@@ -21,7 +21,7 @@
   &__wrapper {
     padding-left: 156px;
 
-    @include mq('desktop-wide') {
+    @media only screen and (max-width: 1700px) {
       padding-left: 10px;
     }
   }
@@ -70,7 +70,7 @@
     border-left: 5px solid transparent;
     transition: border 0.2s linear;
 
-    @include mq('desktop-wide') {
+    @media only screen and (max-width: 1700px) {
       padding-left: 10px;
     }
 
@@ -84,7 +84,7 @@
       transition: opacity 0.2s linear;
       opacity: 0;
 
-      @include mq('desktop-wide') {
+      @media only screen and (max-width: 1700px) {
         display: none;
       }
     }
@@ -373,7 +373,7 @@
 }
 
 .wrapper {
-  @media only screen and (min-width: 1248px) and (max-width: 1439px) {
+  @media only screen and (min-width: 1248px) and (max-width: 1700px) {
     .header__disclaimer {
       font-size: 14px;
     }

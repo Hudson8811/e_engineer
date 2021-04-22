@@ -109,7 +109,7 @@ body {
           box-shadow: 0px 0px 23px rgba(0, 0, 0, 0.35);
   overflow: hidden;
   margin-left: 530px; }
-  @media only screen and (max-width: 1439px) {
+  @media only screen and (max-width: 1700px) {
     .main {
       width: calc(100% - 380px);
       margin-left: 300px; } }
@@ -164,7 +164,7 @@ body {
     z-index: 1; }
     .water_mater_2_page .main .container {
       height: 100%; }
-    @media only screen and (max-width: 1439px) {
+    @media only screen and (max-width: 1700px) {
       .water_mater_2_page .main {
         padding-left: 300px; } }
     @media only screen and (max-width: 1247px) {
@@ -450,7 +450,7 @@ body {
   background: #2d4597;
   -ms-flex-negative: 0;
       flex-shrink: 0; }
-  @media only screen and (max-width: 1439px) {
+  @media only screen and (max-width: 1700px) {
     .header {
       width: 300px; } }
   @media only screen and (max-width: 1247px) {
@@ -458,7 +458,7 @@ body {
       display: none; } }
   .header__wrapper {
     padding-left: 156px; }
-    @media only screen and (max-width: 1439px) {
+    @media only screen and (max-width: 1700px) {
       .header__wrapper {
         padding-left: 10px; } }
   .header__info {
@@ -495,7 +495,7 @@ body {
     border-left: 5px solid transparent;
     -webkit-transition: border 0.2s linear;
     transition: border 0.2s linear; }
-    @media only screen and (max-width: 1439px) {
+    @media only screen and (max-width: 1700px) {
       .header__link {
         padding-left: 10px; } }
     .header__link:before {
@@ -513,7 +513,7 @@ body {
       -webkit-transition: opacity 0.2s linear;
       transition: opacity 0.2s linear;
       opacity: 0; }
-      @media only screen and (max-width: 1439px) {
+      @media only screen and (max-width: 1700px) {
         .header__link:before {
           display: none; } }
     .header__link:hover, .header__link.is--active {
@@ -804,7 +804,7 @@ body {
         font-weight: 400;
         line-height: 135%; }
 
-@media only screen and (min-width: 1248px) and (max-width: 1439px) {
+@media only screen and (min-width: 1248px) and (max-width: 1700px) {
   .wrapper .header__disclaimer {
     font-size: 14px; }
   .wrapper .header__link {
