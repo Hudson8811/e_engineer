@@ -36,6 +36,10 @@
     }
   }
 
+  @media only screen and (max-width: 1700px) {
+    @include font-source-sans(90px, #fff, 700, 125%);
+  }
+
   @include mq('desktop') {
     @include font-source-sans(40px, #fff, 700, 125%);
     min-height: 94px;

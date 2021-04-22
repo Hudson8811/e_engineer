@@ -211,7 +211,7 @@ body {
   transition: transform 0.2s linear;
   transform: translateX(100%);
 
-  @include mq('desktop-wide') {
+  @media only screen and (max-width: 1700px) {
     width: calc(100% - 380px);
   }
 
