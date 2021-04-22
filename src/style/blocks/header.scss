@@ -4,7 +4,7 @@
   top: 0;
   height: 100vh;
   width: 530px;
-  padding: 55px 0 72px;
+  padding: 55px 0 44px;
   display: flex;
   flex-direction: column;
   background: #2d4597;
@@ -392,5 +392,36 @@
     .header__desc-link {
       font-size: 17px;
     }
+  }
+}
+
+.copyright {
+  padding-left: 156px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  span {
+    display: block;
+    margin-right: 10px;
+    @include font-source-sans(13px, #fff, 400, 18px);
+  }
+
+  a {
+    display: block;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 135%;
+    text-decoration-line: underline;
+    color: #fff;
+  }
+
+  @media only screen and (max-width: 1700px) {
+    padding-left: 10px;
+  }
+
+  @include mq('desktop') {
+    padding-left: 40px;
   }
 }
