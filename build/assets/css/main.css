@@ -2185,6 +2185,8 @@ body {
       display: block;
       width: 18px;
       height: 18px; }
+  .counters.boilers .counters__image {
+    height: 200px; }
 
 .services-slider {
   margin: 0 -10px; }
