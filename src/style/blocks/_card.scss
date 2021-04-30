@@ -9,7 +9,7 @@
     max-width: 100%;
     overflow: auto;
     background: #ffffff;
-    padding: 40px 62px 0 40px;
+    padding: 40px 62px 20px 40px;
     transition: all 0.2s linear;
     transform: translateX(100%);
 
@@ -66,6 +66,7 @@
         max-height: 100%;
         object-fit: contain;
         object-position: center;
+        margin: 0 auto;
 
         @include mq('phone-wide') {
           margin: 0 auto;
@@ -160,7 +161,7 @@
       .counters__marker {
         justify-content: center;
         margin-bottom: 0;
-        margin-right: 16px;
+        margin-right: 34px;
 
         @include mq('tablet') {
           margin-right: 0;

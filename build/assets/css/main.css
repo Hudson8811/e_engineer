@@ -2599,14 +2599,21 @@ body {
             justify-content: flex-start;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; }
+            align-items: center;
+    width: calc(100% - 72px); }
     @media only screen and (max-width: 767px) {
       .basket__contain {
         padding-left: 12px;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap; } }
   .basket__info {
-    padding: 0 22px; }
+    padding: 0 22px;
+    width: 50%; }
+    .basket__info .counters__name {
+      max-width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
     @media only screen and (max-width: 767px) {
       .basket__info {
         padding: 0 0 15px 0;
@@ -2738,7 +2745,7 @@ body {
         -ms-flex-align: center;
             align-items: center;
     min-height: 40px;
-    width: 160px;
+    width: 180px;
     max-width: 100%;
     background: #bad700;
     border-radius: 3px;
@@ -2762,7 +2769,7 @@ body {
         -ms-flex-align: center;
             align-items: center;
     min-height: 40px;
-    width: 160px;
+    width: 180px;
     border: 1px solid #dce4ee;
     border-radius: 4px;
     font-family: 'Avenir Next Cyr', Helvetica, Arial, sans-serif;
@@ -2785,7 +2792,7 @@ body {
   max-width: 100%;
   overflow: auto;
   background: #ffffff;
-  padding: 40px 62px 0 40px;
+  padding: 40px 62px 20px 40px;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
   -webkit-transform: translateX(100%);
@@ -2836,7 +2843,8 @@ body {
       -o-object-fit: contain;
          object-fit: contain;
       -o-object-position: center;
-         object-position: center; }
+         object-position: center;
+      margin: 0 auto; }
       @media only screen and (max-width: 479px) {
         .card__slider-wrapper img {
           margin: 0 auto; } }
@@ -2924,7 +2932,7 @@ body {
           -ms-flex-pack: center;
               justify-content: center;
       margin-bottom: 0;
-      margin-right: 16px; }
+      margin-right: 34px; }
       @media only screen and (max-width: 767px) {
         .card__content-btns .counters__marker {
           margin-right: 0;

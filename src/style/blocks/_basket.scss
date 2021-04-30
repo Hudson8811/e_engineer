@@ -147,6 +147,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    width: calc(100% - 72px);
 
     @include mq('tablet') {
       padding-left: 12px;
@@ -156,6 +157,11 @@
 
   &__info {
     padding: 0 22px;
+    width: 50%;
+
+    .counters__name {
+      @include truncate(100%);
+    }
 
     @include mq('tablet') {
       padding: 0 0 15px 0;
@@ -274,7 +280,7 @@
     justify-content: center;
     align-items: center;
     min-height: 40px;
-    width: 160px;
+    width: 180px;
     max-width: 100%;
     background: #bad700;
     border-radius: 3px;
@@ -291,7 +297,7 @@
     justify-content: center;
     align-items: center;
     min-height: 40px;
-    width: 160px;
+    width: 180px;
     border: 1px solid #dce4ee;
     border-radius: 4px;
     @include font-source-sans(14px, #000, 400, 135%);
