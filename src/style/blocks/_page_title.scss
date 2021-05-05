@@ -51,56 +51,97 @@
   }
 
   &__special {
-    position: fixed;
+    position: absolute;
     z-index: 21;
-    @include сentering-x;
-    bottom: 30px;
+    left: 0;
+    bottom: 0;
     background: #fdea40;
-    width: 100%;
+    width: 597px;
     justify-content: flex-start;
     align-items: flex-end;
-    padding: 15px 16px 20px;
-    display: none;
+    padding: 34px 41px 52px 36px;
+    box-sizing: border-box;
+    display: flex;
 
     @include mq('desktop') {
-      display: flex;
+      position: fixed;
+      width: 100%;
+      bottom: 30px;
+      @include сentering-x;
+      padding: 15px 16px 20px;
     }
 
     &-title {
       display: block;
-      @include font-source-sans(13px, #000, 750, 135%);
-      margin-bottom: 8px;
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 125%;
+      text-transform: uppercase;
+      color: #000000;
+      margin-bottom: 23px;
+
+      @include mq('desktop') {
+        display: block;
+        @include font-source-sans(13px, #000, 750, 135%);
+        margin-bottom: 8px;
+      }
     }
 
     &-desc {
       display: block;
-      @include font-source-sans(13px, #000, 600, 135%);
+      font-weight: 600;
+      font-size: 25px;
+      line-height: 135%;
+      color: #000000;
+      max-width: 360px;
+      @include mq('desktop') {
+        max-width: none;
+        @include font-source-sans(13px, #000, 600, 135%);
+      }
     }
 
     &-sileprice {
       display: block;
       position: relative;
-      @include font-source-sans(15px, #000, 450, 135%);
-      margin-bottom: 5px;
       text-align: right;
+      font-weight: 450;
+      font-size: 20px;
+      line-height: 125%;
+      text-align: right;
+      color: #000000;
+      margin-bottom: 12px;
+
+      @include mq('desktop') {
+        @include font-source-sans(15px, #000, 450, 135%);
+        margin-bottom: 5px;
+      }
 
       &:before {
-        @include pseudo;
-        width: 42px;
-        height: 1px;
-        background-color: #ff0000;
-        left: 50%;
-        top: 50%;
-        margin-top: -1px;
-        margin-left: -21px;
-        transform: rotate(30deg);
+        @include mq('desktop') {
+          @include pseudo;
+          width: 42px;
+          height: 1px;
+          background-color: #ff0000;
+          left: 50%;
+          top: 50%;
+          margin-top: -1px;
+          margin-left: -21px;
+          transform: rotate(30deg);
+        }
       }
     }
 
     &-price {
       display: block;
       text-align: right;
-      @include font-source-sans(24px, #000, 700, 24px);
+      font-weight: 700;
+      font-size: 45px;
+      line-height: 125%;
+      color: #000000;
+
+      @include mq('desktop') {
+        @include font-source-sans(24px, #000, 700, 24px);
+      }
     }
 
     &-col {

@@ -262,3 +262,22 @@ $(document).ready(function(){
         });
     })
 })
+
+function checkItems(){
+    if($(window).width() < 1248 && $('.wrapper').hasClass('water_mater_2_page')){
+        const item = $('.menu-item')
+        item.appendTo('.wrapper ')
+    }
+}
+checkItems()
+$(window).resize(function(){
+    checkItems()
+})
+
+$('.water_mater_2_page .header .header__link').click(function(e){
+    if($(window).width() < 1248){
+        $('.mobile-menu__wrapper').addClass('is--active abs')
+        $('.overlay').addClass('is--active')
+        $('.mobile__header-burger').addClass('is--active back')
+    }
+})

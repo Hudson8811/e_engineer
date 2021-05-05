@@ -356,3 +356,12 @@ body {
     }
   }
 }
+.water_mater_2_page {
+  @include mq('desktop') {
+    .header {
+      .copyright {
+        display: none;
+      }
+    }
+  }
+}
