@@ -1877,20 +1877,19 @@ body {
           font-weight: 450;
           line-height: 135%;
           margin-bottom: 5px; } }
-      @media only screen and (max-width: 1247px) {
-        .page_title__special-sileprice:before {
-          content: "";
-          display: block;
-          position: absolute;
-          width: 42px;
-          height: 1px;
-          background-color: #ff0000;
-          left: 50%;
-          top: 50%;
-          margin-top: -1px;
-          margin-left: -21px;
-          -webkit-transform: rotate(30deg);
-                  transform: rotate(30deg); } }
+      .page_title__special-sileprice:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 42px;
+        height: 1px;
+        background-color: #ff0000;
+        right: 10px;
+        top: 50%;
+        margin-top: -1px;
+        margin-left: -21px;
+        -webkit-transform: rotate(30deg);
+                transform: rotate(30deg); }
     .page_title__special-price {
       display: block;
       text-align: right;
